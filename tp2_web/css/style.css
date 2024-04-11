@@ -1,0 +1,191 @@
+/* GENERALES */
+body {
+    /* color: rgb(0, 255, 0);   */
+    background-image: url(https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?cs=srgb&dl=pexels-pixabay-53594.jpg&fm=jpg);
+    background-size: cover;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+    text-wrap: balance;
+    /* text-shadow: 0 0 5px #fafafa; */
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 720px;
+    background-color: rgb(159, 201, 95);
+    padding: 40px 20px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 1.6rem;
+
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.archivo-full-ancho {
+    height: 600px%;
+}
+
+iframe {
+    width: 100%;
+    height: 100&;
+    frameborder: 0;
+}
+
+header {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    max-width: 100%;
+    margin: 0% 10px 10px 10px;
+}
+
+h3 {
+    font-size: 2.25rem;
+}
+
+.nube {
+    background-image: url(img/nube-texto.avif);
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+
+/* HEADER */
+
+
+
+header .header-text {
+    flex-direction: column;
+    text-align: right;
+    flex-grow: 1;
+}
+
+header h1 {
+    font-family: 'Kertth', sans-serif;
+    font-size: 2.4rem;
+}
+
+header p {
+    font-size: small;
+}
+
+header img {
+    width: 400px;
+    height: 250px;
+    border-radius: 40%;
+    border: 5px solid black;
+    box-shadow: 0 0 20px black
+}
+
+#descripcion {
+    border-width: 10pxs;
+    border-color: blue;
+    /* border-style:; */
+    box-shadow: 10px 10px 10px 5px blue;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* seccion proyecto */
+header h2 {
+    text-align: center;
+}
+
+/* seccion - prsentacion */
+
+.seccion-presentacion {
+    text-align: right;
+    flex-grow: 1;
+}
+
+#descripcion p {
+    /* margin: 10px; */
+}
+
+.player-descripcion .text-description {
+    margin: 5px auto 20px auto;
+    font-size: 28;
+}
+
+.seccion-proyecto h2 {
+    margin-bottom: 10px;
+}
+
+.seccion-proyecto article {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.seccion-proyecto p {
+    margin-top: 0;
+    font-style: oblique;
+    font-size: large;
+}
+
+.nube p {
+    font-size: small;
+}
+
+/* seccion marco de investigacion */
+
+.seccion-marco .textos {
+    font-size: medium;
+}
+
+/* seccion obra iuniversal */
+.seccion-obra header {
+    align-items: center;
+    justify-content: center;
+}
+
+.section-obra img {
+    text-align: center;
+}
+
+
+
+/* ficha artistica */
+.ficha-artistica h4 {
+    margin-bottom: 0;
+
+}
+
+#lista-ficha-artistica-iuniversal {
+    list-style-type: none;
+}
+
+.main-article-footer {
+    transform: scale(0.8);
+    margin: 0;
+}
+
+
+footer {
+    background-image: url(img/foto-aperturas.png);
+
+}
