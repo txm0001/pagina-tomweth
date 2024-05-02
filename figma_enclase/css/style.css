@@ -1,8 +1,8 @@
 body {
     background: var(--Background-Color, #161513);
-    margin: 0;
+    margin: 0 auto;
     font-family: "Poppins", sans-serif;
-    width: 1440px;
+    /* width: 1440px; */
     height: 2670px;
     color: #FFFFFF;
     font-weight: 400;
@@ -29,6 +29,7 @@ body {
 .header-content {
     display: flex;
     justify-content: space-between;
+
 }
 
 .light {
