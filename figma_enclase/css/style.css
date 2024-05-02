@@ -1,0 +1,267 @@
+body {
+    background: var(--Background-Color, #161513);
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    width: 1440px;
+    height: 2670px;
+    color: #FFFFFF;
+    font-weight: 400;
+    opacity: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* CLASES GENERALES */
+
+.site-section {
+    max-width: auto;
+    margin-top: 6.25rem; //100/16
+}
+
+.site-column {
+    max-width: 810px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.light {
+    background: #FFFFFF;
+    color: #161513;
+
+}
+
+.dark {
+    background: #161513;
+    color: #FFFFFF;
+}
+
+.rectangle5 {
+    width: 24.375rem;
+    height: 18.8125rem;
+    background-color: #2A2A2A;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3 ease;
+}
+
+.rectangle5:hover {
+    transform: translateY(-0.3rem) scale(1.03);
+    box-shadow: 0.5rem 0.5rem 1rem rgba (0, 0, 0, 1);
+}
+
+/* HEADER  */
+
+header {
+    box-shadow: 0px 4px 4px 0px #00000040;
+    background-color: #222222;
+    height: 82px;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+
+header a {
+    font-size: 0.94375rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
+header ul {
+    /* width: Hug (473.73px)px; */
+    /* height: Hug (19.64px)px; */
+    margin-top: 31px;
+    margin-left: 256px;
+    opacity: 0px;
+    display: flex;
+    gap: 70px;
+}
+
+/* main {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* ABOUTME - INTRO */
+
+.about-me {
+    max-width: 670px;
+    margin: auto;
+
+}
+
+.about-me>* {
+    margin-bottom: 2.5rem;
+}
+
+.about-me .avatar {
+    margin: auto;
+    margin-bottom: 2.5rem;
+    width: 213px;
+    gap: 0px;
+    opacity: 0px;
+    background: linear-gradient(137.59deg, #FF8660 9.86%, #8000FF 104.95%);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.about-me #avatarImg {
+    padding: 0;
+}
+
+.about-me h2 {
+    width: 670px;
+    height: 127px;
+    top: 444px;
+    left: 384px;
+    padding: 0px 8px 0px 6px;
+    gap: 0px;
+    opacity: 0px;
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-size: 3.4375rem;
+    font-weight: 800;
+    line-height: 3.96rem;
+    text-align: center;
+    text-justify: distribute;
+    /* margin: auto; */
+}
+
+.about-me h2 span {
+    background-image: linear-gradient(137.59deg, #FF8660 9.86%, #8000FF 104.95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-me p {
+    margin-bottom: 3.375rem;
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-justify: inter-cluster;
+    color: #8491A0;
+}
+
+.about-me ul {
+    display: flex;
+    margin: auto;
+    /* margin-top: 2rem; */
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    /* border: 1px; */
+    width: 500px;
+    gap: 18px;
+
+
+
+}
+
+.about-me .actionButtons {
+    margin: 0 auto;
+    width: 195px;
+    height: 64px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    /*no entiendo por que tuve que agregar display flex aca para que me andara la alineacion bien  de los botones sino no me andaba */
+    /* line-height: 32.07px;  */
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #FFFFFF;
+
+}
+
+/* EXPERIENCE SECTION */
+
+.experience-languages h4 {
+    text-transform: uppercase;
+    margin: auto;
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0.12em;
+    text-align: center;
+    color: #C5C5C5;
+}
+
+.experience-languages ul {
+    display: flex;
+    margin: auto;
+    margin-top: 3rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 60.45px;
+}
+
+.experience-languages img {
+    width: auto;
+    height: 42px;
+}
+
+/* PROJECTS SECTION */
+
+.projects h3 {
+    background: linear-gradient(180deg, #FF8660 0%, #D5491D 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-family: Poppins;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 35.75px;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.project-thumbnails {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 1.875rem;
+}
+
+.project-box {
+    display: flex;
+    margin: 0.75rem 1.4375rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-box {
+    text-transform: uppercase;
+}
+
+.project-box p {
+    font-size: 0.625rem;
+    font-weight: 800;
+    /* line-height: 1.1875rem; */
+}
+
+.project-box h4 {
+    margin-top: 0.2em;
+    font-family: Poppins;
+    font-size: 19px;
+    font-weight: 800;
+}
