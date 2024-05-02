@@ -13,6 +13,8 @@ body {
     box-sizing: border-box;
 }
 
+/* CLASES GENERALES */
+
 .site-section {
     max-width: auto;
     margin-top: 6.25rem; //100/16
@@ -29,6 +31,33 @@ body {
     justify-content: space-between;
 }
 
+.light {
+    background: #FFFFFF;
+    color: #161513;
+
+}
+
+.dark {
+    background: #161513;
+    color: #FFFFFF;
+}
+
+.rectangle5 {
+    width: 24.375rem;
+    height: 18.8125rem;
+    background-color: #2A2A2A;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3 ease;
+}
+
+.rectangle5:hover {
+    transform: translateY(-0.3rem) scale(1.03);
+    box-shadow: 0.5rem 0.5rem 1rem rgba (0, 0, 0, 1);
+}
+
+/* HEADER  */
+
 header {
     box-shadow: 0px 4px 4px 0px #00000040;
     background-color: #222222;
@@ -39,7 +68,6 @@ header img {
     width: 80px;
     height: 80px;
     margin: auto;
-
 }
 
 header a {
@@ -65,6 +93,8 @@ header ul {
     align-items: center;
     justify-content: center;
 } */
+
+/* ABOUTME - INTRO */
 
 .about-me {
     max-width: 670px;
@@ -116,6 +146,7 @@ header ul {
 }
 
 .about-me p {
+    margin-bottom: 3.375rem;
     font-family: Poppins;
     font-size: 1.25rem;
     font-weight: 300;
@@ -129,7 +160,7 @@ header ul {
 .about-me ul {
     display: flex;
     margin: auto;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -157,22 +188,11 @@ header ul {
     justify-content: center;
     border: 2px solid #FFFFFF;
 
-
-
 }
 
-.light {
-    background: #FFFFFF;
-    color: #161513;
+/* EXPERIENCE SECTION */
 
-}
-
-.dark {
-    background: #161513;
-    color: #FFFFFF;
-}
-
-.experience-languages h3 {
+.experience-languages h4 {
     text-transform: uppercase;
     margin: auto;
     font-family: Poppins;
@@ -197,4 +217,51 @@ header ul {
 .experience-languages img {
     width: auto;
     height: 42px;
+}
+
+/* PROJECTS SECTION */
+
+.projects h3 {
+    background: linear-gradient(180deg, #FF8660 0%, #D5491D 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-family: Poppins;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 35.75px;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.project-thumbnails {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 1.875rem;
+}
+
+.project-box {
+    display: flex;
+    margin: 0.75rem 1.4375rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-box {
+    text-transform: uppercase;
+}
+
+.project-box p {
+    font-size: 0.625rem;
+    font-weight: 800;
+    /* line-height: 1.1875rem; */
+}
+
+.project-box h4 {
+    margin-top: 0.2em;
+    font-family: Poppins;
+    font-size: 19px;
+    font-weight: 800;
 }

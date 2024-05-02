@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/reset.css">
 
     <link rel="stylesheet" href="css/style.css">
@@ -19,8 +20,7 @@
     <header>
         <div class="site-column header-content">
             <h1>
-                <img src="https://s3-alpha-sig.figma.com/img/682c/a5c2/c4579f40bcdbed1cf8ef022313963389?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=E5IHSf~H45DqtoQDxrotAi777-y6z8aQ4s6imuyKzpppayjltjMRv9yuvh4uHJudAGeo-NKximjj~T-GRkY32jSMOpJrEhSx8EYMmEFj9xwW8wfOK1xrARZguNoOKtictlQpEKhdO6DPGpvWHeSVAFq1Chz-PGzw~2smc~y41CfZsdggJ4og~oHLA-BEzhHd0-8x0Jhu1k4Z3JJtcFiKohU5~1NHCW3IlZE7cYGwAszuhbsMi~hMcgNiiLK8F6XWJ4nCsy6irI1HYmckIQAEO75HD5RvH4bWVtgiK3iTr06UCSKOMqqcK1d2CfaQZP6jrhhpZzAXp4AUQXHb5k7EHg__"
-                    alt="logo">
+                <img src="img/logo.png" alt="logo">
             </h1>
             <nav class="navbar">
                 <ul>
@@ -38,9 +38,7 @@
                 <div class="avatar">
                     <!-- <div id="avatarBackground">
                 </div> -->
-                    <img id="avatarImg"
-                        src="img/avatarImg.png"
-                        alt="avatar">
+                    <img id="avatarImg" src="img/avatarImg.png" alt="avatar">
                 </div>
                 <h2>I do code and <br> make content <span class="shine">about it!</span></h2>
                 <p>I am a seasoned full-stack software engineer with over
@@ -55,7 +53,7 @@
         </section>
         <section class="site-column site-section">
             <article class="experience-languages">
-                <h3>experience with</h3>
+                <h4>experience with</h4>
                 <ul>
                     <li><a href="#javascript"><img src="img/javascript.png" alt="javascript logo"></a></li>
                     <li><a href="#nodejs"><img src="img/nodejs.png" alt="nodejs logo"></a></li>
@@ -64,29 +62,39 @@
                     <li><a href="#reactjs"><img src="img/reactjs.png" alt="reatjs logo"></a></li>
                 </ul>
             </article>
-
-
         </section>
-        <!-- <div class="experienceApps">
-                <h3>EXPERIENCE WITH</h3>
-                <div class="appLogos">
-                    <img src="img/javascript.png" alt="javascript logo">
-                    <img src="img/nodejs.png" alt="nodejs logo">
-                    <img src="img/html.png" alt="html logo">
-                    <img src="img/css.png" alt="css logo">
-                    <img src="img/reactjs.png" alt="reactjs logo">
+        <section class="site-column site-section">
+            <article class="projects">
+                <h3>projects</h3>
+                <div class="project-thumbnails">
+                    <div class="rectangle5 thumbnail1"> <!--aca podria haber puesto una sola clase creo -->
+                        <!-- podria haber sido un UL pero quise probar resolverlo con un div-->
+                        <a href="#project1">
+                            <img src="img/project-thumbnail-1.png" alt="power of html beginner tutorial">
+                        </a>
+                        <div class="project-box">
+                            <div class="project-titlebox">
+                            <p>click here to visit</p>
+                            <h4>html tutorial</h4>
+                            </div>
+                            <a href="#project1"><img src="img/view-icon.svg" alt="view icon"></a>
+                        </div>
+                    </div>
+                    <div class="rectangle5 thumbnail2">
+                        <a href="#project2">
+                            <img src="img/project-thumbnail-2.png" alt="unlock css magic tutorial">
+                        </a>
+                        <div class="project-box">
+                            <div class="project-titlebox">
+                            <p>click here to visit</p>
+                            <h4>css tutorial</h4>
+                            </div>
+                            <a href="#project1"><img src="img/view-icon.svg" alt="view icon"></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </article>
-        <section class="proyects">
-            <h2>PROYECTS</h2>
-            <div id="proyect1" class="rectangle5">
-                <img src="https://s3-alpha-sig.figma.com/img/ad7c/c4b1/1a99118ac57430e0fe2b8cd0f0b46718?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Nwd2TiOZr~HoNoJ0Lrm9VNTINaGnVomQ6x5k~JHas051c6rm-JMTT608ntSoVkWZQcLiRa6wW8xAG4en5fQcIirmwgYGX~xMJucV8LYUAwWcq07ld2zONiMm15Bw8kOwn~NBj8UKVQ5CBoQFbVf65v9DGHMTvpCUv5ZkDyF50j6iiiOTu8Se7VO0Dtarhthp3TmmEPcVrG3sYIC8PF1otIiyqexrNqhaW6HXQZHqOH4LFTPWIZ1B-~woTB3qKoalCG5e5ZS-uPJ6IYHw5OsXQ6MKAjCVVG0JEXtbTgwaCw7nH6FGNnBVdDuvd3L8ZkBqESTWocuEzSfA8AVGYB8U5Q__"
-                    alt="project thumbnail the power of html">
-                <div>
-                </div>
-            </div>
-        </section> -->
+            </article>
+        </section>
 
     </main>
 
