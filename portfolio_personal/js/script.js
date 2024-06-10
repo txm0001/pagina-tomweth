@@ -139,16 +139,25 @@ window.onload = function () {
             };
         };
     };
-        // document.addEventListener('click', (e) => {
-        //     const videoContainer = document.getElementById('container-iuniversalVideo');
-        //     const videoYoutube = document.getElementById('iuniversal-video');
-        //     const thumbnail = document.getElementById('iuniversalPic');
 
-        //     if (videoContainer.classList.contains('mostrar') && !videoContainer.contains(e.target) && e.target !== videoYoutube) {
-        //         videoContainer.classList.remove('mostrar');
-        //         videoYoutube.src = ""; // Stop the video
-        //     }
-        // });
+    document.getElementById('silentWalksPic').addEventListener('click', () => {
+        const soundConteiner = document.getElementById('container-silentWalksCloud');
+        const sonidoSoundcloud = document.getElementById('silentWalks-soundcloud');
+        const soundSrc = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1277899771&color=%2318180f&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=true";
 
+        soundConteiner.classList.toggle('mostrar');
+        sonidoSoundcloud.src = soundSrc;
+        event.stopPropagation();
+    });
 
+    window.onclick = (event) => {
+        const soundConteiner = document.getElementById('container-silentWalksCloud');
+        const sonidoSoundcloud = document.getElementById('silentWalks-soundcloud');
+        if (!soundConteiner.contains(event.target) && !sonidoSoundcloud.contains(event.target)) {
+            if (soundConteiner.classList.contains('mostrar')) {
+                soundConteiner.classList.remove('mostrar');
+                sonidoSoundcloud.src = "";
+            };
+        };
     };
+};
