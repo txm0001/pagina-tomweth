@@ -1,14 +1,15 @@
 :root {
     color: #ffff;
+    /* transform: ; */
+    
 }
 
 body {
     font: normal 100%/1.5 "Raleway", sans-serif;
     background-color: #00f;
-    /* rgb(3, 3, 194)*/
 }
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
     body {
         font-size: 0.8rem;
     }
@@ -19,7 +20,7 @@ body {
         width: 100vw;
         height: 100vh;
     }
-}
+} */
 
 
 
@@ -30,14 +31,13 @@ h3 {
 }
 
 .container {
-    width: 90vh;
     /* max-height: 1000px; */
     margin: 0 auto;
     height: 100vh;
     /* 100% del alto de la ventana */
     /* background-color: rgb(0, 0, 255);
     Color de fondo azul */
-    width: 80vw;
+    width: 100vw;
     display: grid;
     max-height: 100vh;
     grid-template-columns: 20px 1fr 20px;
@@ -46,11 +46,11 @@ h3 {
         "header header header"
         ". main ."
         "footer footer footer";
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #titleIcon {
-    background-color: blue;
+    background-color: #00f;
 }
 
 header {
@@ -59,12 +59,12 @@ header {
     color: #fff;
     display: flex;
     flex-wrap: wrap;
-    max-width: 90vw;
+    max-width: 100%;
     justify-content: end;
     align-items: center;
     gap: 0.8em;
     padding: 1.5em 1.5em;
-    width: 100%;
+    width: 90vw;
 
 
 }
@@ -94,14 +94,15 @@ main {
     justify-content: center;
     align-items: center;
     max-height: fit-content;
+    max-width: 80vw;
 }
 
-/* main svg {
-    width: 100vh;
-    height: 100vh;
+svg {
+    width: 70vw;
+    height: auto;
     max-width: 100%;
     max-height: 100%;
-} */
+}
 
 footer {
     grid-area: footer;
@@ -113,6 +114,7 @@ footer {
     max-width: 80vw;
     font-size: 1rem;
     opacity: 0.9;
+    padding: 0 10rem;
 }
 
 footer .links {
@@ -239,40 +241,50 @@ c:visited {
 
 @keyframes floatAnim {
     0% {
-        transform: translateX(0vw) translateY(0vh) scale(1);
+        transform: translateX(-10vw) translateY(0vh) scale(1);
+        opacity: 1;
     }
 
     20% {
         transform: translateX(100vw) translateY(20vh) scale(0.5);
+        opacity: 0.5;
     }
 
     40% {
         transform: translateX(-10vw) translateY(80vh) scale(0.8);
+        opacity: 0.8;
     }
 
     50% {
         transform: translateX(10vw) translateY(10vh) scale(1.2);
+        opacity: 1;
     }
 
     62% {
         transform: translateX(5vw) translateY(0vh) scale(0.5);
+        opacity: 0.5;
     }
 
     67% {
         transform: translateX(10vw) translateY(10vh) scale(0.7);
+        opacity: 0.7;
     }
 
     80% {
         transform: translateX(5vw) translateY(0vh) scale(0.3);
+        opacity: 0.2;
     }
 
     92% {
         transform: translateX(10vw) translateY(10vh) scale(1.3);
+        opacity: 1;
     }
 
     100% {
         transform: translateX(-10vw) translateY(0vh) scale(0.5);
+        opacity: 0.3;
     }
+
 }
 
 
@@ -286,13 +298,13 @@ c:visited {
 
 #bio {
     position: absolute;
-    /* max-width: 40vw; */
-    width: 40vw;
-    min-width: 300px;
-    top: 60vhvh;
-    left: 50vw;
+    max-width: 40vw;
+    width: 20vw;
+    min-width: 250px;
+    top: 6vh;
+    left: 40vw;
     z-index: 9;
-    border: #ffff 1px solid;
+    border: #00f 2px solid;
     flex-direction: column;
     display: none;
     opacity: 0.8;
@@ -300,9 +312,11 @@ c:visited {
     font-size: 1rem;
     cursor: grab;
     border-radius: 0.5em;
-    color: #fff;
+    color: #00f;
     font-weight: 200;
+    background: #ffff;
     backdrop-filter: blur(20px);
+    box-shadow:#000 0 0 20px;
 }
 
 #bioheader {
@@ -311,18 +325,19 @@ c:visited {
     text-align: justify;
     text-justify: inter-word;
     margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
     z-index: 10;
     fill-opacity: 1;
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px solid #00f;
     width: 100%;
-    padding: 1rem 2em;
+    padding: 0em 1em;
+    color: #00f;
 
 }
 
 #bio p {
     margin-top: 1rem;
-    padding: 1rem 2em;
+    padding: 1em 2em;
+    font-size: 0.8em;
 
 }
 
@@ -330,7 +345,7 @@ c:visited {
     max-height: 30vh;
     border-radius: 0.2em;
     margin-top: 1rem;
-    padding: 1rem 2em;
+    /* padding: 1rem 2em; */
 
 }
 
@@ -366,6 +381,7 @@ c:visited {
     opacity: 0.8;
     backdrop-filter: blur(20px);
     border: #ffff 1px solid;
+    box-shadow:#000 0 0 20px;
 
 }
 
