@@ -1,0 +1,5 @@
+lluvia de ilusiones
+
+es una web app que emula la creacion de una lluvia digital de material audivoisual basada en el uso de material sonoro y visual de de bancos de archivos libres de internet.
+Utilizando sonidos folley de FreeSound.com y implementando el uso de una API externa (Unsplash) donde se obtienen imagenes dinamicamente a partir de los nombres de los archivos de sonido que caen desde la parte superior de la pantalla como gotas de informacion.
+Los usuarios, pueden interactuar con los elementos a traves del mouse pudiendo silenciar la lluvia y ver/escuchar una sola gota.

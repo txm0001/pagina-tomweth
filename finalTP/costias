@@ -1,0 +1,5 @@
+const container = document.getElementById('falling-container');
+const FREESOUND_API_KEY = 'JHPdXv5QLpgbjbTuHD6gIX4hTGDDCseNeGwNqHlk';
+const FREESOUND_URL = 'https://freesound.org/apiv2/search/text/';
+const UNSPLASH_ACCESS_KEY = 'UQcZGyo_R5OBuAX7IW0xgTwwrpY_Fm6kEMsy3mMx1J4';
+const UNSPLASH_URL = 'https://api.unsplash.com/search/photos';
