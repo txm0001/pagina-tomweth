@@ -15,7 +15,7 @@
 }
 
 body {
-    font: normal 100%/1.5 "Raleway", sans-serif;
+    font:  normal 100%/1.5 "Raleway", sans-serif;
     background-color: var(--blue-color);
     color: var(--white-color);
     max-height: 100vh;
@@ -156,7 +156,7 @@ footer .ref {
 .c {
     font-size: 25px;
     fill: var(--white-color);
-    font-weight: 400;
+    font-weight: 500;
     font-family: "Raleway", sans-serif;
     opacity: 0;
     animation: fadeIn 12s ease-in forwards, shadow 10s ease-in-out;
@@ -421,7 +421,7 @@ footer .ref {
 
 #obra3 {
     top: 86vh;
-    left: 37vw;
+    left: 35vw;
     z-index: 11;
     background-color: green;
 }
@@ -429,6 +429,13 @@ footer .ref {
 /* #obra3 h3 {
     /* background-color: green; 
 } */
+
+#obra4 {
+    top: 100vh;
+    left: 65vw;
+    z-index: 12;
+    background-color: #ff0000;
+}
 
 /* Laboratorios */
 
@@ -438,8 +445,9 @@ footer .ref {
     z-index: 12;
     /* max-width: 20%; */
     flex-wrap: wrap;
-    background-color: #9a84d3;
+    background-color: var(--white-color);
     backdrop-filter: grayscale(100%);
+    color: var(--blue-color);
 
 }
 
@@ -495,6 +503,44 @@ footer .ref {
     height: 35vh;
 
 }
+
+/* mas emergentes */
+#orolodo {
+    position: absolute;
+    top: 50vh;
+    left: 10vw;
+    z-index: 14;
+    background-color: #ff0000;
+}
+#masEmergentes img {
+    max-width: 25vw;
+}
+#prensa {
+    position: absolute;
+    max-width: 30vw;
+    max-width: 30%;
+    min-width: 250px;
+    top: 6vh;
+    left: 56%;
+    z-index: 10;
+    border: var(--blue-color) 2px solid;
+    flex-direction: column;
+    display: none;
+    opacity: 0.8;
+    font-size: 1rem;
+    cursor: grab;
+    border-radius: 0.3em;
+    color: var(--blue-color);
+    font-weight: 200;
+    background-color: var(--white-color);
+    /* background-image: url("/img/pepoytom.profile.jpg"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    backdrop-filter: blur(20px);
+    box-shadow: #000 0 0 20px;
+}
+
+
 
 /* BIO PEPO Y BIO TOM */
 
@@ -635,31 +681,32 @@ footer .ref {
 }
 
 /* residencias */
-#residencia1 {
+#residenciasEmergentes > div {
+    display: none;
     position: absolute;
     max-width: 25vw;
     z-index: 5;
+    background-color: var(--white-color);
+    backdrop-filter: blur(20px);
+    color: var(--blue-color);
+}
+
+#residencia1 {
     top: 15vh;
     left: 70vw;
-    display: none;
+
 }
 
 #residencia2 {
-    position: absolute;
-    max-width: 25vw;
-    z-index: 5;
     top: 25vh;
     left: 40vw;
-    display: none;
+
 }
 
 #residencia3 {
-    position: absolute;
-    max-width: 25vw;
-    z-index: 5;
     top: 10vh;
     left: 10vw;
-    display: none;
+
 }
 
 /* Video Container */

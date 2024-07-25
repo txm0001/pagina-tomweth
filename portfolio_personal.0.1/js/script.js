@@ -77,14 +77,16 @@ window.onload = function () {
     const closeObra1 = document.getElementById('closeObra1');
     const closeObra2 = document.getElementById('closeObra2');
     const closeObra3 = document.getElementById('closeObra3');
+    const closeObra4 = document.getElementById('closeObra4');
     const obra1 = document.getElementById('obra1');
     const obra2 = document.getElementById('obra2');
     const obra3 = document.getElementById('obra3');
+    const obra4 = document.getElementById('obra4');
 
 
     // --- Event Listener for Showing Obras ---
     document.getElementById('obras').addEventListener('click', () => {
-        [obra1, obra2, obra3].forEach(obra => {
+        [obra1, obra2, obra3, obra4].forEach(obra => {
             obra.style.display = 'flex';
         });
         floatingImage.style['animation-play-state'] = 'paused';
@@ -110,65 +112,91 @@ window.onload = function () {
         closeObra3.addEventListener('touchstart', () => {
             obra3.style.display = 'none';
         });
+        closeObra4.addEventListener('click', () => {
+            obra4.style.display = 'none';
+        });
+        closeObra4.addEventListener('touchstart', () => {
+            obra4.style.display = 'none';
+        });
     });
 
     // --- Make Obras Draggable ---
     makeElementDraggable(obra1);
     makeElementDraggable(obra2);
     makeElementDraggable(obra3);
+    makeElementDraggable(obra4);
 
     // --- Event Listener for iUniversal Video ---
-    document.getElementById('iuniversalPic').addEventListener('click', (event) => {
-        const videoContainer = document.getElementById('container-iuniversalVideo');
-        const videoYoutube = document.getElementById('iuniversal-video');
-        const videoSrc = "https://www.youtube.com/embed/xcQxfhsaTKw?si=3Tv1antKf0UEojSr&amp;controls=0&autoplay=1";
+document.getElementById('iuniversalPic').addEventListener('click', (event) => {
+    const videoContainer = document.getElementById('container-iuniversalVideo');
+    const videoYoutube = document.getElementById('iuniversal-video');
+    const videoSrc = "https://www.youtube.com/embed/xcQxfhsaTKw?si=3Tv1antKf0UEojSr&amp;controls=0&autoplay=1";
 
-        videoContainer.classList.toggle('mostrar');
-        videoYoutube.src = videoSrc;
-        event.stopPropagation();
-    });
+    videoContainer.classList.toggle('mostrar');
+    videoYoutube.src = videoSrc;
+    event.stopPropagation();
+});
 
-    // --- Event Listener for Closing iUniversal Video ---
-    window.addEventListener('click', (event) => {
-        const videoContainer = document.getElementById('container-iuniversalVideo');
-        const videoYoutube = document.getElementById('iuniversal-video');
-        // const closeVideo = document.querySelector('#closeIuniversal-video');
-        const videoSrc = "https://www.youtube.com/embed/UW2wEtLUTys?si=2ti_hhLG4L7NTulW&controls=0&autoplay=1";
+// --- Event Listener for Closing iUniversal Video ---
+window.addEventListener('click', (event) => {
+    const videoContainer = document.getElementById('container-iuniversalVideo');
+    const videoYoutube = document.getElementById('iuniversal-video');
+    const closeVideo = document.querySelector('#closeIuniversal-video');
 
-        if (!videoContainer.contains(event.target) && !videoYoutube.contains(event.target) || event.target == closeVideo) {
-            if (videoContainer.classList.contains('mostrar')) {
-                videoContainer.classList.remove('mostrar');
-                videoYoutube.src = "";
-                videoYoutube.src = videoSrc;
-            }
+    if (!videoContainer.contains(event.target) && !videoYoutube.contains(event.target) || event.target == closeVideo) {
+        if (videoContainer.classList.contains('mostrar')) {
+            videoContainer.classList.remove('mostrar');
+            videoYoutube.src = "";
         }
-    });
+    }
+});
 
-    // --- Event Listener for Silent Walks ---
-    document.getElementById('silentWalksPic').addEventListener('click', (event) => {
-        const soundConteiner = document.getElementById('container-silentWalksCloud');
-        const sonidoSoundcloud = document.getElementById('silentWalks-soundcloud');
-        const soundSrc = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1277899771&color=%2318180f&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=true";
+// --- Event Listener for Silent Walks ---
+document.getElementById('silentWalksPic').addEventListener('click', (event) => {
+    const soundContainer = document.getElementById('container-silentWalksCloud');
+    const sonidoSoundcloud = document.getElementById('silentWalks-soundcloud');
+    const soundSrc = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1277899771&color=%2318180f&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=true";
 
-        soundConteiner.classList.toggle('mostrar');
-        sonidoSoundcloud.src = soundSrc;
-        event.stopPropagation();
-    });
+    soundContainer.classList.toggle('mostrar');
+    sonidoSoundcloud.src = soundSrc;
+    event.stopPropagation();
+});
 
-    // --- Event Listener for Closing Silent Walks ---
-    window.addEventListener('click', (event) => {
-        const soundConteiner = document.getElementById('container-silentWalksCloud');
-        const sonidoSoundcloud = document.getElementById('silentWalks-soundcloud');
-        const soundSrc = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1277899771&color=%2318180f&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=true";
+// --- Event Listener for Closing Silent Walks ---
+window.addEventListener('click', (event) => {
+    const soundContainer = document.getElementById('container-silentWalksCloud');
+    const sonidoSoundcloud = document.getElementById('silentWalks-soundcloud');
+    const closeSound = document.querySelector('#closeSilentWalks-soundcloud');
 
-        if (!soundConteiner.contains(event.target) && !sonidoSoundcloud.contains(event.target)) {
-            if (soundConteiner.classList.contains('mostrar')) {
-                soundConteiner.classList.remove('mostrar');
-                sonidoSoundcloud.src = "";
-
-            }
+    if (!soundContainer.contains(event.target) && !sonidoSoundcloud.contains(event.target) || event.target == closeSound) {
+        if (soundContainer.classList.contains('mostrar')) {
+            soundContainer.classList.remove('mostrar');
+            sonidoSoundcloud.src = "";
         }
-    });
+    }
+});
+
+// --- Page Visibility API to handle video and sound playback ---
+document.addEventListener('visibilitychange', () => {
+    const iuniversalVideo = document.getElementById('iuniversal-video');
+    const iuniversalVideoSrc = "https://www.youtube.com/embed/xcQxfhsaTKw?si=3Tv1antKf0UEojSr&amp;controls=0&autoplay=1";
+    const silentWalksSoundcloud = document.getElementById('silentWalks-soundcloud');
+    const silentWalksSoundSrc = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1277899771&color=%2318180f&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=true";
+
+    if (document.hidden) {
+        // Pause the video and sound by removing the src
+        iuniversalVideo.src = "";
+        silentWalksSoundcloud.src = "";
+    } else {
+        // Resume the video and sound by re-adding the src only if the container is visible
+        if (document.getElementById('container-iuniversalVideo').classList.contains('mostrar')) {
+            iuniversalVideo.src = iuniversalVideoSrc;
+        }
+        if (document.getElementById('container-silentWalksCloud').classList.contains('mostrar')) {
+            silentWalksSoundcloud.src = silentWalksSoundSrc;
+        }
+    }
+});
 
     // --- Event Listener for SHHHH! en la Pulperia Video ---
     document.getElementById('pulpeButton').addEventListener('click', (event) => {
@@ -181,20 +209,35 @@ window.onload = function () {
     });
 
     // --- Event Listener for Closing Pulperia Video ---
-    window.addEventListener('click', (event) => {
-        const videoContainer = document.getElementById('container-shhhhPulperiaVideo');
-        const videoYoutube = document.getElementById('shhhhPulperia-video');
-        const closeVideo = document.querySelector('#closePulperia-video');
-        const videoSrc = "https://www.youtube.com/embed/UW2wEtLUTys?si=pfs8y6QFB9N-Mt_U&amp;controls=0&autoplay=1";
+window.addEventListener('click', (event) => {
+    const videoContainer = document.getElementById('container-shhhhPulperiaVideo');
+    const videoYoutube = document.getElementById('shhhhPulperia-video');
+    const closeVideo = document.querySelector('#closePulperia-video');
+    const videoSrc = "https://www.youtube.com/embed/UW2wEtLUTys?si=pfs8y6QFB9N-Mt_U&amp;controls=0&autoplay=1";
 
-        if (!videoContainer.contains(event.target) && !videoYoutube.contains(event.target) || event.target == closeVideo) {
-            if (videoContainer.classList.contains('mostrar')) {
-                videoContainer.classList.remove('mostrar');
-                videoYoutube.src = "";
-                videoYoutube.src = videoSrc;
-            }
+    if (!videoContainer.contains(event.target) && !videoYoutube.contains(event.target) || event.target == closeVideo) {
+        if (videoContainer.classList.contains('mostrar')) {
+            videoContainer.classList.remove('mostrar');
+            videoYoutube.src = "";
         }
-    });
+    }
+});
+
+// --- Page Visibility API to handle video playback ---
+document.addEventListener('visibilitychange', () => {
+    const videoYoutube = document.getElementById('shhhhPulperia-video');
+    const videoSrc = "https://www.youtube.com/embed/UW2wEtLUTys?si=pfs8y6QFB9N-Mt_U&amp;controls=0&autoplay=1";
+
+    if (document.hidden) {
+        // Pause the video by removing the src
+        videoYoutube.src = "";
+    } else {
+        // Resume the video by re-adding the src only if the container is visible
+        if (document.getElementById('container-shhhhPulperiaVideo').classList.contains('mostrar')) {
+            videoYoutube.src = videoSrc;
+        }
+    }
+});
 
     // --- Variables para Laboratorios --- 
     const laboratoriosTodos = document.getElementById('laboratoriosEmergentes');
@@ -348,53 +391,80 @@ window.addEventListener('click', (event) => {
 
 
 
-// --- Variables para live shows ---
-const colabs = document.getElementById('colabs');
-const liveShowsTodos = document.getElementById('liveShowsEmergentes');
-const closeJGLolla = document.getElementById('closeJGLolla');
-const closeAGNosEnVera = document.getElementById('closeAGNosEnVera');
-const jgLolla2024 = document.getElementById('jgLolla2024');
-const videoJGLolla = document.getElementById("videoJGLolla");
-const jgLolla2024Pic = document.getElementById("jgLolla2024Pic");
-const agNosEnVera2024 = document.getElementById('agNosEnVera2024');
-const agNosEnVera2024Pic = document.getElementById('agNosEnVera2024Pic');
+document.addEventListener('DOMContentLoaded', function () {
+    // --- Variables para live shows ---
+    const colabs = document.getElementById('colabs');
+    const liveShowsTodos = document.getElementById('liveShowsEmergentes');
+    const closeJGLolla = document.getElementById('closeJGLolla');
+    const closeAGNosEnVera = document.getElementById('closeAGNosEnVera');
+    const jgLolla2024 = document.getElementById('jgLolla2024');
+    const videoJGLolla = document.getElementById("videoJGLolla");
+    const jgLolla2024Pic = document.getElementById("jgLolla2024Pic");
+    const agNosEnVera2024 = document.getElementById('agNosEnVera2024');
+    const agNosEnVera2024Pic = document.getElementById('agNosEnVera2024Pic');
 
-// --- Event Listener for Showing Live Shows ---
-colabs.addEventListener('click', () => {
-    [jgLolla2024, agNosEnVera2024].forEach(liveShow => {
-        liveShow.style.display = 'block';
+    // --- Event Listener for Showing Live Shows ---
+    colabs.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent the click event from propagating
+        [jgLolla2024, agNosEnVera2024].forEach(liveShow => {
+            liveShow.style.display = 'block';
+        });
+        floatingImage.style['animation-play-state'] = 'paused';
     });
-    floatingImage.style['animation-play-state'] = 'paused';
 
-    closeJGLolla.addEventListener('click', () => {
+    // --- Event Listeners for Closing Live Shows ---
+    closeJGLolla.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent the click event from propagating
         jgLolla2024.style.display = 'none';
     });
-    closeJGLolla.addEventListener('touchstart', () => {
+    closeJGLolla.addEventListener('touchstart', (e) => {
+        e.stopPropagation(); // Prevent the touchstart event from propagating
         jgLolla2024.style.display = 'none';
     });
 
-    closeAGNosEnVera.addEventListener('click', () => {
+    closeAGNosEnVera.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent the click event from propagating
         agNosEnVera2024.style.display = 'none';
     });
-    closeAGNosEnVera.addEventListener('touchstart', () => {
+    closeAGNosEnVera.addEventListener('touchstart', (e) => {
+        e.stopPropagation(); // Prevent the touchstart event from propagating
         agNosEnVera2024.style.display = 'none';
     });
 });
 
-// --- Event Listener for Video JG LollaPalooza ---
-document.jgLolla2024Pic.addEventListener("click", function () {
+document.addEventListener('DOMContentLoaded', function () {
+    // --- Event Listener for Video JG LollaPalooza ---
+    jgLolla2024Pic.addEventListener("click", function (e) {
+        e.stopPropagation(); // Prevent the click event from propagating
+        // Show the video player
+        videoJGLolla.style.display = 'block';
+        // Play the video
+        videoJGLolla.volume = 0.7;
+        videoJGLolla.play();
+    });
 
-    // Show the video player
-    videoJGLolla.style.display = 'block';
-    // Play the video
-    videoJGLolla.play();
-    // Stop propagation to prevent the document click listener from immediately hiding the video
-    e.stopPropagation();
-});
+    // Function to hide the video
+    function hideVideoJGLolla() {
+        videoJGLolla.pause(); // Pause the video
+        videoJGLolla.currentTime = 0; // Reset the video time to 0
+        videoJGLolla.style.display = 'none'; // Hide the video player
+    }
 
-// --- Event Listener for Closing Video JG LollaPalooza ---
-videoJGLolla.addEventListener('ended', function () {
-    videoJGLolla.style.display = 'none'; // Hide the video player
+    // Event listener to hide the video when it ends
+    videoJGLolla.addEventListener('ended', hideVideoJGLolla);
+
+    // Event listener to hide the video if clicking outside of it
+    document.addEventListener('click', function (event) {
+        const isClickInside = videoJGLolla.contains(event.target) || jgLolla2024Pic.contains(event.target);
+        if (!isClickInside) {
+            hideVideoJGLolla(); // Hide the video player
+        }
+    });
+
+    // Prevent the click inside the video from propagating to the document click listener
+    videoJGLolla.addEventListener('click', function (e) {
+        e.stopPropagation();
+    });
 });
 
 // --- Function to Make Elements Draggable ---
@@ -477,7 +547,9 @@ function randomSonido() {
 }
 
 function playSonido() {
-    new Audio(randomSonido()).play();
+    const audio = new Audio(randomSonido());
+    audio.volume = 0.4; // Ajusta el volumen (0.0 es el volumen más bajo, 1.0 es el volumen más alto)
+    audio.play();
 }
 
 for (let i = 0; i < itemCategories.length; i++) {
