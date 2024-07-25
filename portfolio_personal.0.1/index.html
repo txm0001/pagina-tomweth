@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pepo & tom</title>
+    <link id="iconoPyT" rel="icon" href="img/pytLogo.png">
+    <link rel="alternate" hreflang="en" href="index-en.html" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styleOrdenado.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" id="esIndex">es</a> | <a href="index-en.html" id="enIndex">en</a>
+        </header>
+        <main>
+            <!-- DesktopSvg -->
+            <svg id="svgDesktop" version="1.2" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1280 720" width="1024"
+                height="576">
+                <defs>
+                    <image width="37" height="71" id="ePepo" class="E"
+                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAABHCAMAAAC3fH5gAAAAAXNSR0IB2cksfwAAAvRQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ScVxIwAAAPx0Uk5TAAECAAQFCAMNEhEHCxchIBYGEBwsOBoKPlRTJBkuSWZ5ZD9EepuafS8YDBNAY4qswKhzCStyuNi+kyUPFDV7pcnh7NypXiJB9vXozaRX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" />
+                    <image width="58" height="118" id="mTom" class="M"
+                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAB2CAMAAACu/3ANAAAAAXNSR0IB2cksfwAAAwBQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Bz0LCAAAAQB0Uk5TAAABAgQGBQMHCREYHh0ZEAgTJDhLV0w5IA0MWXqUoqOWUioPJUp1nr7U3dWTJgsrVYi31+v09urMkEksXMbl8/f1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" />
+                </defs>
+                <!-- <style>
+                    .a {
+                        fill: #fff
+                    }
+
+                    .b {
+                        fill: none;
+                        stroke: #fff;
+                        paint-order: stroke fill markers;
+                        stroke-miterlimit: 100;
+                        stroke-width: 2.6
+                    }
+                </style> -->
+                <path class="a"
+                    d="m499.6 399.2q-4.1 0-7.5-4.2-3.2-4.1-5.1-10.3v39.6h-4.4v-90.5h3.9v12.4q2-6 5.3-9.7 3.3-3.8 7.1-3.8 3.5 0 6.4 2.8 2.8 2.7 5 7.4 2.1 4.7 3.2 10.7 1.2 5.9 1.2 12.4 0 8.9-1.9 16.6-1.8 7.5-5.2 12.1-3.4 4.5-8 4.5zm-1.2-7.4q2.8 0 4.9-2.1 2.2-2.2 3.8-5.9 1.6-3.7 2.4-8.2 0.8-4.7 0.8-9.6 0-5.2-0.9-9.9-0.9-4.7-2.7-8.3-1.7-3.5-3.9-5.6-2.3-2.1-4.9-2.1-1.7 0-3.5 1.2-1.8 1.2-3.4 3.6-1.6 2.2-2.7 5-1.1 2.9-1.3 6.1v19.7q1 4.5 2.7 8.2 1.7 3.6 4 5.8 2.3 2.1 4.7 2.1zm73.4 7.4q-4.2 0-7.5-4.2-3.3-4.1-5.2-10.3v39.6h-4.3v-90.5h3.9v12.4q1.9-6 5.3-9.7 3.3-3.8 7.1-3.8 3.4 0 6.3 2.8 2.9 2.7 5 7.4 2.1 4.7 3.3 10.7 1.2 5.9 1.2 12.4 0 8.9-1.9 16.6-1.9 7.5-5.3 12.1-3.4 4.5-7.9 4.5zm-1.2-7.4q2.7 0 4.9-2.1 2.2-2.2 3.7-5.9 1.6-3.7 2.4-8.2 0.9-4.7 0.9-9.6 0-5.2-1-9.9-0.9-4.7-2.6-8.3-1.7-3.5-4-5.6-2.2-2.1-4.8-2.1-1.7 0-3.5 1.2-1.8 1.2-3.5 3.6-1.6 2.2-2.6 5-1.1 2.9-1.4 6.1v19.7q1 4.5 2.8 8.2 1.7 3.6 3.9 5.8 2.3 2.1 4.8 2.1zm37.9 7.4q-3.6 0-6.7-2.6-3-2.7-5.2-7.2-2.2-4.7-3.4-10.6-1.3-6.1-1.3-12.7 0-6.9 1.3-12.8 1.2-6.1 3.4-10.6 2.3-4.7 5.3-7.3 3-2.7 6.6-2.7 3.6 0 6.6 2.7 3 2.6 5.3 7.3 2.2 4.5 3.4 10.6 1.2 5.9 1.2 12.8 0 6.6-1.2 12.7-1.2 5.9-3.4 10.6-2.2 4.5-5.3 7.2-3 2.6-6.6 2.6zm-12.1-33q0 7.1 1.6 13.1 1.6 5.8 4.4 9.2 2.7 3.3 6.1 3.3 3.3 0 6-3.4 2.8-3.5 4.5-9.4 1.6-6 1.6-13 0-7.2-1.6-13.1-1.7-5.9-4.5-9.4-2.7-3.4-6-3.4-3.4 0-6.1 3.5-2.7 3.6-4.4 9.5-1.6 5.8-1.6 13.1z" />
+                <path class="and" id="and-desktop" onclick="tiraPedito()"
+                    d="m656.1 394.3c-0.8 0.7-1.6 1.1-2.3 1.1-0.8 0.1-1.5-0.3-2.1-1-0.7-0.7-1.3-1.9-1.8-3.5-0.6-1.6-1-3.7-1.3-6.2-0.2-2-0.3-3.8-0.2-5.6 0.1-1.7 0.3-3.4 0.8-5 0.4-1.6 1-3.1 1.9-4.6 0.8-1.4 1.9-2.9 3.2-4.3 0 0 1.2-1.2 2.3-2.4 1.2-1.1 2.4-2.2 2.4-2.2 1.3-1 2.4-2.1 3.5-3.2 1.1-1 2-2.2 2.9-3.4 0.8-1.2 1.5-2.5 2-4 0.6-1.5 0.9-3.2 1.1-5.1 0.1-2.1-0.1-4.1-0.5-5.9-0.5-1.9-1.4-3.7-2.5-5.3-1.1-1.7-2.5-3.2-4.2-4.6-1.6-1.4-3.5-2.6-5.7-3.5-1.1-0.6-2.2-0.9-3.2-1.2-1-0.2-2-0.3-2.9-0.3-1.7 0.1-3.1 0.7-4.3 1.8-1.1 1.2-1.8 2.9-2.3 4.9-0.4 2.1-0.6 4.5-0.4 7.3 0.2 2 0.5 4 1 5.9 0.4 2 1 4 1.8 5.9 0.7 1.9 1.6 3.8 2.6 5.7 1 1.8 2.1 3.5 3.3 5.2-0.7 0.8-1.4 1.6-2 2.4-0.6 0.9-1.1 1.7-1.6 2.6-1 1.8-1.7 3.7-2.2 5.7-0.5 2.1-0.8 4.3-0.9 6.7 0 2.5 0.2 5.2 0.6 8.1 0.3 1.7 0.6 3.3 0.9 4.7 0.4 1.5 0.7 2.9 1.1 4.1 0.9 2.4 1.8 4.3 2.8 5.5 0.9 1.2 1.9 1.8 3 1.8 0.6-0.1 1.1-0.3 1.7-0.6 0.6-0.4 1.2-0.9 1.8-1.6 0.5-0.6 1.1-1.3 1.6-2 0.5-0.8 1-1.5 1.4-2.4 1-1.6 1.8-3.3 2.6-5.1 0.8-1.7 1.4-3.5 2-5.3 0.5-1.8 0.9-3.5 1.1-5.3 0 0 0.2 0.6 0.5 1.4 0.3 0.7 0.6 1.7 0.9 2.7 0.3 0.9 0.6 1.8 0.8 2.4 0.1 0.6 0.2 1 0.2 1 0 0 3.2-3.1 3.2-3.1 0 0-0.2-0.7-0.5-1.8-0.1-0.5-0.3-1.3-0.6-2.1-0.3-0.8-0.6-1.7-0.9-2.7-0.4-1-0.7-2.1-1.1-3.1-0.4-1.1-0.8-2.1-1.2-3.1-0.8-1.9-1.3-3.2-1.3-3.2 0 0-3.2 3.5-3.2 3.5 0.4 1.1 0.6 2.2 0.8 3.2 0.1 1.1 0.2 2.1 0.1 3.2 0 2-0.4 4.1-1.1 6-0.6 2-1.4 3.9-2.3 5.6-0.5 0.9-1 1.7-1.6 2.4-0.5 0.7-1.1 1.4-1.7 1.9zm-8.7-55c-0.1-1.9 0.1-3.5 0.4-4.8 0.3-1.3 0.9-2.3 1.6-3 0.8-0.6 1.7-1 2.8-1 1.1-0.1 2.3 0.2 3.6 0.7 1.2 0.4 2.3 1.1 3.3 1.8 0.9 0.8 1.8 1.7 2.5 2.7 0.7 1 1.2 2.2 1.6 3.5 0.3 1.2 0.5 2.7 0.5 4.3-0.1 1.5-0.3 2.8-0.7 3.9-0.3 1.2-0.8 2.2-1.4 3.2-0.6 0.9-1.3 1.7-2 2.5-0.8 0.8-1.7 1.6-2.6 2.3 0 0-2.6 2.3-2.6 2.3-1.2-1.8-2.2-3.5-3-5.1-0.9-1.7-1.6-3.3-2.1-4.8-0.6-1.6-1-3.1-1.3-4.5-0.3-1.4-0.5-2.7-0.6-4z" />
+                <use href="#ePepo" x="516" y="331" />
+                <path class="a"
+                    d="m706.9 387.5l1.1 7.2q-0.5 0.4-1.5 1.5-1 1-2.5 1.8-1.4 0.8-3.1 0.8-1.7 0-3.3-1.5-1.5-1.4-2.4-4.3-0.9-3-0.9-7.3v-48.7h-4.3v-7.1h4.3v-23h4.1v23h7.2v7.1h-7.2v46.2q0.1 3.7 1.2 5.5 1.1 1.8 2.6 1.8 1.6 0 3-1.1 1.4-1.3 1.7-1.9zm18.9 11.8q-3.3 0-6.2-2.7-2.8-2.9-4.9-7.8-2.1-4.9-3.2-11.2-1.1-6.4-1.1-13.5 0-7.3 1.1-13.6 1.1-6.4 3.2-11.2 2.1-5 4.9-7.7 2.9-2.9 6.3-2.9 3.3 0 6.1 2.9 2.9 2.7 4.9 7.7 2.1 4.8 3.3 11.2 1.1 6.3 1.1 13.6 0 7.1-1.1 13.5-1.2 6.3-3.3 11.2-2 4.9-4.9 7.8-2.8 2.7-6.2 2.7zm-11.3-35q0 7.6 1.5 13.8 1.6 6.2 4.1 9.8 2.6 3.6 5.7 3.6 3.1 0 5.7-3.7 2.6-3.7 4.1-9.9 1.6-6.4 1.6-13.9 0-7.6-1.6-13.8-1.5-6.3-4.1-10-2.6-3.6-5.7-3.6-3.1 0-5.7 3.7-2.5 3.8-4 10.1-1.6 6.2-1.6 13.9z" />
+                <use href="#mTom" x="740" y="284" />
+                <text style="transform:matrix(1,-0.024,.024,1,65.938,325.863)">
+                    <tspan x="-38.8" y="0" class="c"><a href="#obrasEmergentes" id="obras">obras</a></tspan>
+                </text>
+                <text style="transform:matrix(1,0,0,1,218,103)">
+                    <tspan x="-82.2" y="0" class="c"><a href="#residenciasEmergentes" id="residencias">residencias</a>
+                    </tspan>
+                </text>
+                <text style="transform:matrix(1,0,0,1,1070.473,134.206)">
+                    <tspan x="-82.2" y="0" class="c"><a href="#colabsEmergentes" id="colabs">live shows + colabs</a>
+                    </tspan>
+                </text>
+                <text style="transform:matrix(1,0,0,1,1165.946,580.103)">
+                    <tspan x="-47.7" y="0" class="c"><a href="#masEmergente" id="mas">&#8594 ++++</a></tspan>
+                </text>
+                <text style="transform:matrix(1,0,0,1,213.473,614.261)">
+                    <tspan x="-82.3" y="-10" class="c"><a href="#laboratoriosEmergentes"
+                            id="laboratorios">laboratorios</a></tspan>
+                </text>
+                <path fill-rule="evenodd" class="b" id="tentaculo1"
+                    d="m458.5 367.5c-15.2-2.1-77.6 1-94.7-2.8-4.3-1-12.4-3.5-14.2-8.5-8.1-22.8 19.2-33.2 28.9-48.6 2.8-4.5 3.2-11.5 3.9-16.7 0.6-4.6 0.5-9.7-2-13.8-8.5-14.2-112 37.3-105.7 10.9 19.2-80.5-129.7 21-161 21" />
+                <path fill-rule="evenodd" class="b" id="tentaculo2"
+                    d="m562.3 309c9.4-2.4 90.3-80.9 94.8-109.5 7-44-110.5-25.4-106.5-3.3 13.1 73-159.1 21-89.3 8.8 96.7-17.1-180.4-29.8-187.3-91.6" />
+                <path fill-rule="evenodd" class="b" id="tentaculo3"
+                    d="m717.1 309c79.6-0.9-2.2-280.4 163.4-94 36.2 40.7 110 45.2 53.3-61.3-26.3-49.4 33.7-70.6 50.7-45.9" />
+                <path fill-rule="evenodd" class="b" id="tentaculo4"
+                    d="m740.5 414.8c7.3 0.9 229.1 41.1 195.6-28.9-26.6-55.6-161.7 190.8-20.8 122.7 35.8-17.4 158.6-120.4 209.5 37" />
+                <path fill-rule="evenodd" class="b" id="tentaculo5"
+                    d="m563.8 452.1c-12.3 0-13.5 8.3-2.7 13.5 9.6 4.7 47.2 18.9 36 37.2-5.6 9.2-30.3 10.2-40.7 14.7-2.7 1.2-8.8 1.2-10.7 3.1-3.2 3.2 20.7 17 19.5 21.4-1.5 5.6-40.6 1.6-38.5 6.1 13.3 29.1-33.4 17.2-33.2 7.7 1.8-67.7-208.1 16.1-214.9 22.2" />
+            </svg>
+            <!-- mobileSvg -->
+            <svg id="svgMobile" version="1.2" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1280 1280" width="600"
+                height="600">
+                <defs>
+                    <image width="76" height="416" id="p1-mobile" class="a"
+                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAAGgAgMAAAB9CGn1AAAAAXNSR0IB2cksfwAAAAxQTFRFAAAA/////////v7+Vx5QSAAAAAR0Uk5TAAD//w21dGUAAAIfSURBVHic7di9SgNBEADgWfUaLQxK9Bn8eYYQUNOkiX+nJCBpRIS8ghrwCUTBIk0soqIp1t7ifAbBFxAR1DoQD9TZ3fuD0yKZUVPsVJevuNvs3+ysyObhGgDKTQkfm6BDUGy2Di5A9kniD7/CZGJ/Tv1wziSPTd97+u3FMRYTu3nz751Wm8OGLiEI3a1k2zj2Qnyo063SxZb6N2tgpgDZqk3IHkkYun0zjabadkPMqjGffpQweeiRTZbUE757q6g7gWoQrhanpTuBbmpkVLxLeKlRzfE/T4MxL5dgYpFqACsjwQwabXKYWSm6E7rtzwtJtmUI46MNnSrVgq1LhbvGYIVMZMPPd0sZVvP8CtXOZWRqN3MH2CBXc5ap5sLvmfokp02dsFuH03AScVthkA3Tc6rN1v7Vvhujvm2Q5toPxrreuPcD7v2Kez/lsGROwSNTKs/0ap1qbLmayXlMhjk09Y2eLXGmUdWJS7VEp6KZMwiTYbXDYFfhGROuQJgzF8miMzCTrS54hrCICM7AFCvdqEpORXxGp5gsYSGiI64hKLbdwIegyWHdQ7OgaBpvRDUYxSotM4106R7UiBRzsRLBdSP25iGqYUmGlYhTqE4deHGNTbL4jkLMzDOY2rlM6OqTbphJTMR3KCQLG5244yGZSiUqkvdSJMPNQcW55DJ1PZHbMcmKwwDW4dWDPi0Oa9asWbNmzZo1a9as/ZFBOr4AvHQWXYeBdfwAAAAASUVORK5CYII=" />
+                    <image width="84" height="284" id="E-mobile" class="E"
+                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAEcCAMAAABuyWNGAAAAAXNSR0IB2cksfwAAAvRQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ScVxIwAAAPx0Uk5TAAECAAQFCAMNEhEHCxchIBYGEBwsOBoKPlRTJBkuSWZ5ZD9EepuafS8YDBNAY4qswKhzCStyuNi+kyUPFDV7pcnh7NypXiJB9vXozaRX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" />
+                    <image width="76" height="416" id="p2-mobile" class="a"
+                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAAGgAgMAAAB9CGn1AAAAAXNSR0IB2cksfwAAAAxQTFRF////AAAA/////v7+Z0klDgAAAAR0Uk5TAAD//w21dGUAAAIeSURBVHic7di9TgJBEADgOZNrLFEewUKiD2BsqCikkETwB2NCjCbGwDtQ26qJiQ0NkACJZ3EWNN5DGCh8Aw8pbUg4Z3dv71BocEal2Km4r4Bld292Zi0AKw8Q9J89CDogw6JYS34cNj186L8w2WhYFg+JozSPdV89+ZC8ZbFRUf15SGZyHGbnQoORw2Hde23QZrBmC7+5d1XDR7vBYI85uTr22UANmmpPWTtxA2ojZc7JNj6tZdbE5gneynISiKaXBuD9Qk4C3dpqgZauPTjIU2118OEqC3pV2DukGkC2FO6gZJrD7H29x/2uM66kydYAHXUHfI9qegow3BrdrJ1SZMtZK1VlNUy0RBufRCkHMJsFnQU2XKSVO6Lpo+5XrADjCqe5NW4Dn9NwEzGblVpkw+N5aszG/tNmrdHPbZH22mzjfd+48wF3vuLOpwz25UwpwPQ5M6fpilBG3ZFnHpfhGTr1G3PbRE2Dr6D6DYrpklWZrEG4DLsdBjuOFqkAquaiWVQDM5lobGT4lxDWwASzdl1dBEc1OsWwZwonIe4hKIY9XTgJ2DOFPQ7RsDAXtr6hezCSNYsqT4jLlLBHJFkHO5H+i7r40H0tyTBRJ630w7YX99gki+8oZDtGNtF6qZDpgm44aBXxHQrJ9KAn7nhIJl4W+HYvRTK5fcT7zGTyemJrU9LcJjayGiSXxWHMmDFjxowZM2bMmLE/sgJMxSdCUPYMwLZ3jgAAAABJRU5ErkJggg==" />
+                    <image width="76" height="264" id="o1-mobile" class="a"
+                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAAEIAgMAAACIR/p2AAAAAXNSR0IB2cksfwAAAAxQTFRFAAAA/////////v7+Vx5QSAAAAAR0Uk5TAAD//w21dGUAAAIdSURBVHiczdi9SgNBEAfwOfUaLfw8fQY1byBowI/CNFFD8APUVs0LWAgBSwsRFEEbLYwSUuwjnM8g5A0kYK+CQnRm726TS2z0P4Xb5PIrLpuZ/Zhdj2zz9k8NNdfjL7D5hxl5nswo2c5JKB+jx6GK+a8mevnUtIrt5KI/T8GZUbDkJ7gtDSlY/w25VsTN2+YujzXM5kxIVDGw9b6bKN2zJaK3XdjGzykajj0PRJ9bsE2VyR/OSgD4SYKAmXeUoVwuFOtthFStgSY9lX8uydnL0mofaPLiYpzxuQPcOKQSSNuCC6J6GTMOZNxlbh/GC7KY8cipuDmzmUeN4+jfOhu8ppcSai6k1prrkHGKXEh5ubjD7XF5wBkHdWQBsp4Hb3GoZVX6uoSsWNC2tiEkSac6ZPzSe6NozdrIQosk6ZhVKWX9N14AWlIq6FizlrLBa9g6YqBrcZ8VrTtvv7KumP4z68jRPzTt8aI7nrXnm/781Y1f15oIWrHQYXYPQCy1B/y0p/zKuIRTNd6T2/e8ZJ8GTLfeSNc0PAVx81ecteqwv5p2PSm25IJaJdi4pnYWPJuvyxAzTpILAtf8a/O4JUGQfPGKgZk8xKN84ik5RwFmj5r1sljrnIeY9nnVnomDbHSR0n5O/qN5G3l3ZrfHE9BkoiTNZh+1tjuP3ICCad/nyMplW+oeCTCp9KWl7rkQi+7cePkiHbN3gvmrEsH2DYlyazYb38tOAAAAAElFTkSuQmCC" />
+                    <image width="92" height="336" id="and-mobile" class="and" onclick="tiraPedito()"
+                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAFQCAYAAAAyWhmXAAAAAXNSR0IB2cksfwAAFatJREFUeJztneuzG8UVxLUyxo7Nw4HwMAEqqYQklapU8v//GfmUqlR4BnAgvLENxtZEK81v1duala4e93CdOv2BkVaj3b3NuPeo58yZZ2aJUDxzGSddLBZdfUlbvE/XdVuHrF1MnX/53a3zPS24FMIT00jCg5GEB+NkwsuibMS4m83r0WfXTXezfrJ6vxTeuXzVRfxJbR/X9pF8xuuVrpdSFvpecdX1PUd4MJLwYBxN+PKf9by+uLY52t2q7SvrZvb6us/s5dXbbna9cSok5GFtv6vtN9LnQW3vW98fpQ9y80SOXTmJyREejCQ8GEl4MA4mHO1eCuONvl1q5AubD2e/XrXd7Pf1yB/q+9fr+5uzDdBa9Pjb2n5Z2/9KXz/2lX2nBzqPro80/apoeY7wYCThwUjCg7GT8KX+6c9vXt+ob16s79+SHn+ur/5a23dq+2ptn9XT1/aH2qLH6PPn0vc/tf20tvfseA/i9u9rS8z+qP4tQ3y+1PPHs58JOcKDkYQHIwkPxj7CVcPxQZ6r7Ru1/aP0+Vtt/1Lbt2tLrC6+y6Dh6ClxNFr+mvQljn+lti/X9pfS57PaflFbYne8GZ4VvZ6v2p9Dy3OEByMJD0YSHox9hOuU2I3a3qntm7VVDX/HPvtVbfFQ9JngU2rXrf2F9L1lx3iOvCh90HNi9Nu1df9lgPzOWN1DhN+SIzwYSXgwkvBgNAkXbdO4GR1+qba/ru3b0udubdF5dJ/z6XzjT7UlBQItJ/VBnx/oMRrLfd+SPsT6z9t3uG/9Wzn3yn8pG+X+aXbJyBEejCQ8GEl4MKYIR+NUw9FLNBx/41fSBx1FN9FjdPoH6XvfWvqg8610ZdSWe1GdvznREtfr3zJKie66td9CCt0yHh/ltpwTOcKDkYQHIwkPxohwib9H85cVxLXE2PgYz0kf+qO15IjgcW9yTcr69bLj1/XAD8Mn6xvY3FvXMReKl8J7zVXkPuYT7S4f54m2pWwi86WeTy59OQY5woORhAcjCQ/GvjhcNZLYF6+CmPu29OF8eBLMJ5JP8q70/aC26LrmevdQP9z9b7zvFxp9eI7we6G1DBHtnvBzivbVpS8nI0d4MJLwYCThwXDC3QfXXEA0kjgc/VSt5fvoMTkiaPffpe8/a8tcI3E419bzci18m1et7UHOCvfJvaP3moPC/XHNh+P33eCLL2pO4vxM/kqO8GAk4cFIwoOxT8N1Tc4L1nrc24P4ndgVfX6vtv+QK601vAyx+pPhk+3zci3yBckFvy99uCY5iT6vekf6unZzDw/Wt7SJvbsaq4tXflLuSo7wYCThwUjCg7EivOGDo+HqpaCFeCqtfA+AHq/nCmu+X7fxT3qwPgcddW3Ua0+tsVefA/+Dv4HnCf6LxvX4LK7h39UTfC990Xv30I9CjvBgJOHBSMKDMUU4eqrzgK7rrXwPdJPvP6onWcfjpWzmNLsOXV5p4nw+L+suZZd/7XOQ2sefP/xt3Kf69nj6+C9oeJ1fHdVq4T5/rPdHPH7UXGeO8GAk4cFIwoOxj3DVKXTzJ3uvcP0lTn5QP2UtZq+FI+0eTlC9Cqtd5XrpvxtWp6qt57D47wZ9TYzOuk80XWu1oOvE7CflkOcID0YSHowkPBhOeLFWfQM07IG1qmm+pgftrd7HEHsvtXu3r2y+M7ru6/IVvu4H3/6Otdrnln32yx19ic236nAfghzhwUjCg5GEB2OKcLRS1+TgN5DrjaarJ/3EWnR4Ye+PBefh/jQfEQ+beVTmP7lf/Vu4D545zJn6fG0PNHzkHR07x5kjPBhJeDCS8GCsCBf/Aj1Cg1WfPQ5veQvurxCz8j/22o6+e8F9Ljb3qb8T0Ojv64V55ty3z1ensPvCK3/O3vfAk0Hv+RuO8lRyhAcjCQ9GEh6MfV6K6qzrOhqmOjq13Qsx7JBvvpTh1fePydWb1/nExRJyeLRuR/IDfQ2/bkvG/eCPE3O34nD6wtnktme7kCM8GEl4MJLwYIwJL+NXZazFrtnUGmlpmB9rzUGeA3od7tXnXh83+nruimu55iH6+n79LXEwcoQHIwkPRhIejHG9lO2UwlZeiudJP2708fN7DcEeeDJHr3+0/D733v346Ku1JZfF8xB1fdEN+0zrbB2MHOHBSMKDkYQHwwgftJu6Uy2vwtept9bZcF48CXL2Xpe+Xivw1PlO/74/kHb9BnAtb9WpvWbvaQ/KE88RHowkPBhJeDBGhJPvVxZsdDNr1X5ijpA5w4fSh/6+vp26Jq9I33/X1mtdnRstDZ/S9dY8gHv8PmdwEHKEByMJD0YSHow24V1zzwavI0sOn65pRM/xTtZectnKvx76lM2z4Jg17C1d9pqL1xp9gc/T/mitfuZ7VBzl7ecID0YSHowkPBhNwtkDgT3sK/BO0GzPw+6Bx+35eJ5/3Xvv9VjHPZyq4VPetrf6Pdfwh9b2eGB9du1RsRc5woORhAcjCQ/GIWvt3UthPbpqODH1uGZgN7xnTXsf6hOTr/YyXj4v1rVVLlCHZLHYqtHVA42eyhO82egLyGFBu7UeIs8uYvNWnsuFkSM8GEl4MJLwYByi4WgX+kYcrrVFiNHxvdFN4u83pC97b/L9lVaWsljpaNfNJzWS9O4ieX7d5lpe55yWOlc9yBP0/Yb427RuYTMOL0cuOc0RHowkPBhJeDD2Ed7av4y4lFpQX0gfXrNfMp4KtaXuSl/2UqYGbY3hu9WzgjVAqyOes1LWvslSy/X+fb/PV+y9rtvhe+gzmv2ttdoHDc/64U8TkvBgJOHB2Em4+hpSR5CYFd9ENZyYmnicGBgt17yUN2v7SW2J6/EzhmsvyqLupTMnX6a11w/X8jxG/Jtbs21wLe7Xa6z0QN95pixG93IgcoQHIwkPRhIejEMIr5pK7cBuHZ+W2edDj67UfTM7tNxjYPUz0Fhidr6DnyE5Md3qubHUcq9VpfUFifHfsvdouPrhPIfQ5y+s/Ur68rtjpOHHIkd4MJLwYCThwTiA8GHJzJP6dh3DdkXmNDv2Pv64tmj4DWv1M7QWTwWPRtcO1ZyTodAJ2v2m9PltbX9TW54R5Dlq3MxvCJ4/XPuz2mocTqx+0lwmyBEejCQ8GEl4MC5MOHOMy1B4HYd2ZR3Llm6jd92ggazfYW9L/HD1M3jNPsdoLr7GkGvYbXLJr9f2bj3+Rznfn2qLz47O8zeqLqPd+Dg8e4jDv5O+xOynriMd3UwiCEl4MJLwYBxOeFdqndqu1h0c1XQlJv/UWvII1Q8nv494HE+FOcSt3PRuE1Pjl6iG/662xPXknnA+zYHkGfOR3Sd9dI+JUT547on8lCEJD0YSHoyDCR/i8TIsV9Q1jcS6HufiSescJB6556wQf2vM/tj6ovdvSx++j87jgeCzvyd9/2XH7tXW5y97rDT8DPVcVsgRHowkPBhJeDBOILxr1RYhfsXTxmfGL3lB+t60Fi+F+Pxl6csDw/cyflH6EHej3fgiePMfSl/ib/e/3fs+m3aDHOHBSMKDkYQH4xTCW3vpEJPjaaOR+CVaL2VKj4mjNb73fBRavX9iZ54f+CMfWKufuXdCzH1S7sku5AgPRhIejCQ8GEcTLvuiDXrXbXSU/EA08nNre1DL0NdRtu7Ja5S09tMklkaf37X2I+nLs4X73Nrr57KQIzwYSXgwkvBgnEy4LuQshTh20FbiW/RV8z3QT6853lqLw7MBv9rX+/fA08YzQbuJv/X54XtsnquG+V7kCA9GEh6MJDwYp2u46B77OcxK1eVua88fnSvkGH18zwbVU7SWZwFx9CfSB+1Gs8k9QdtbNXK9JvilI0d4MJLwYCThwTg34V397779KntcH31no6e+l3EPz1nEF9F5Sl4zh4nOo91aT3a05jIi/gY5woORhAcjCQ/GyYQvY2+1U9BuryH4orU9mLtE39Fw/BeNm4m30en37b32wTPxXBP9DbDeay5Qu0GO8GAk4cFIwoNxbsI5Hxrua3s0X5A8QzQcbwUNvyd9ibvfry1+iXopnieIJ9+qcxKu3SBHeDCS8GAk4cE4mnCJv6/JYXL+iLfJPWH9ja7TJA+F86DdrMn5WPq+X1vibo+5ezBfinc+2jutiG4Phvv4N0TOaf4/IgkPRhIejHMQrufAO2FNz11rX5K+xOrMaU7ldffwNfGtuiZot8+RrtCN1+43tXqp6Vv7Hecan6ccSXgwkvBgnEI4mqjzlOR6U+uKtZfE37pOk++jw8TfrfnKT6yPe909vK4gMTZ/o2r43Pp63rnWTT/rvGeO8GAk4cFIwoNxCuGtfG7ibDQcLwVvRa9H3Iwf4vOV/5a+e9fEz7a1m7yXVt1b/B/fi41Wc2LYVyhrXj2NSMKDkYQH42DCy2Y/YjRS93XAQyHuJi4nVlfNZX0OWk39KTyUe42+Pk+peur72pP3Quzf2k8T34W1Q+TC6J7IoHXNg5EjPBhJeDCS8GAcUXt2iHPRZc0XJO+EfBT00/ev7OHeCa3vBdHD4272FJI5yQ4N53cBzw9+C+h8Kn14JvCM8PhcrlX3Qq6W+bE1VXKEByMJD0YSHozD4/D6nW5TR1Y9brQb/UQr0VrdL97XWqLdvq9mj+aanFIWmhNTX5f6bOm8Lvlb0pcYnWcKf0urDstP1uZebE8TkvBgJOHBOLx++CZWxV9Wj8JrD3J+9Fjrm6DhxOPE3ejqRdbkdNuvO/SYe3mjtrpvG/kz7pnwXvNduB90nXj8qHVCOcKDkYQHIwkPxuGEl/qdbtDw1v5qmqvSgzlC9Ue+tGMPrO9QQ3Datxgddz+ce+F3gu6fzDHu02uO63Npar3nOu+8bCT8InqeIzwYSXgwkvBgXJhwWQ+DTnneh77mMzSW+Fb3tETD8VdGce7sYnOHLd+aY67pep/u8XhNgOcbfafq1B5UrzZHeDCS8GAk4cE4hHA8lOsT73uQ74F+om9eT7yH54CgjRf2KKxmIl6218xq5ZN4bg06/by1PdD3netAG9doIkd4MJLwYCThwTiEcPTJaxFqfIsmouHkVuND6Jwm2r2Kv7uhTu3R+ddoNRrL+d3P7sGzhfvkb8DHb2k4Pjvn5RmmGr53vjNHeDCS8GAk4cE4Jg73uczb0ged8zpWrXyPUa637B9xrIbzPTT8gb3XdTtouNfE5f6fk7637TP6ejzeP6tWz4RdeYc5woORhAcjCQ/GIYT72nr8B9U7jhGPu7fd2gNitEb+hHWQU3XIW54HcD+I+9fn0i1r0X2+o38T85yTf0uO8GAk4cFIwoOxk3Cr6zfloWgOCpqI3pPP3ZqntGMnlyPxuUzaVn3FuR3zeFxzbW7bMfqg4cqh7/uZGv5zIwkPRhIejJ2E25yhx7l8pnkZXjtqar+1Hqa1ozKwx8DzUNwfeabRd5+W90C73UvhGfaD9B09N+BMecwRHowkPBhJeDAOIXy05ny28RBaHrf7F608vHPvZekajsfj/k4LXuNQNdx/b3j+pMb3nGf0O0SRIzwYSXgwkvBgHKPhvt+OrnUk/8RrU104D68Vu05hYh84NJa4uaXdk7VmK3Z5SLy/Zq2+5rxb+zvnCA9GEh6MJDwYx+QWMlf40Noens/n84qKeePYKZha2wP0HnjGeP3wXffr50ev95pA+qzJER6MJDwYSXgwzuGlqB/s62p2rblszj0emJfSipc9f4Tzac1EX+PD3+Z5iT18XabrvsJrmG/lp+QID0YSHowkPBiH5KWAqfnKqWM9PHbVY6P2Il6K3JfG8u6De80WfdbwjHHfmvhca16xLsl9It83SF9nfvhVQRIejCQ8GIfkpaBL7vHumqd0Lb/eeK26fkp+uNe4+oV9rr69P2toHzX6UhMAXffaV1v1FWc75mlzhAcjCQ9GEh6MYwj3WLMVh6OF7k3r9Ty/+sJx+Gx7vVEP37uzxuOFvurb19pbna/hfDLdd6u+i9fo8tdN5AgPRhIejCQ8GMcQjk7tWj/PZ56Hp5rLa3zr0fogifsFQ5jLfb+0+axDw9kPjric86jHTR1zdNnzaHRdPnp+39qttfazjMOvHpLwYCThwTgmL8W9Y/WZ3WdwDd9Va5w+o/qFBs/ffm3zUblbX7CXEM8G/Gz1uPfVLldd5pjH7K2+o3nPXGt/BZCEByMJD8YxhHv8rd6x+wyeI6J1SJ63Puj96rtFNLzb2qOn4Jewz1oP4m+ugZ6iz6rhNf4udc+HzuPwXXVd3ENX/2RvzZcc4cFIwoORhAfjmDjcPW/1KLxWIN9p7Z/s+y2g5evzlsHHnpWuW8Xo3RBjd+yrJnE4c5mlejFbHsg30hePexWjd92Wl6I+jtdAcc976Jv7+FxBJOHBSMKDcYqX4h5DD/QS/XQN17rceNkv13alq6UUzz/X/ZfxvNkjU/zwdRy/1G6+h05/bW3rPt0XaeULNtvcT/OKIwkPRhIejFPyUnzNfQ/XRvp47nYP/BC0lWcBvov6GfgjaDdarnE9cbvH3cxf6j5w9Km1y8v6WrW+oiXFjzT6hNzHFXKEByMJD0YSHowLE452lUXdBLjbWnPf43tr6YMsahyOD4KPgQajy+pZoP3oPt635rk8qjfKtX3eUn379fOilHH8zZ82n5+rDtcWcoQHIwkPRhIejMMJ77bqRamXwrwhMTB6+mptdU6Ta3f2GfGyetJote+LpjmA39aTodmePzg8a0rb957NL1G7QY7wYCThwUjCg3Ew4UM8vvGtd2k474m1dZ3mTWvv1BatVX11vUe7NTeda7l2+17G/UlW917wRcqlS/eAHOHBSMKDkYQH4xTCvY5hD+Juj4XxMVSX8VWIrVc5J8tnhK+Z1Nd471/Y9fRaruFot/rrq/PNd+x7eVnIER6MJDwYSXgwjia8DMHroLl9fIvGop940uiqzn/ie/saH/RaY2yvVU5s/V/p87kd898Ae9fBRyBHeDCS8GAk4cE4mvB5N8dT2cSy5GR3Qxz+mbWvzjYg/n7WWtbcq8GBhqPTn9T2Y+lzr7b+vOAZo3nc4fE3yBEejCQ8GEl4ME4m3GobopdoOLrq63l63JiN4Xvq6JocNPuD2r5X24+kD/rejL9/Tt1W5AgPRhIejHMTzs9nbNNPa9sqe+pbBdyx419K3w9r+661n0ofwkFLlQ6cP7sAcoQHIwkPRhIejHMTjl4ynUVohwarRUrYhp2qIWOPr+Q1Ws1PecJNXQrIs4Aw8ErYsY4c4cFIwoORhAfjrITLz/x1KlkpnramqQrE6vxs11TmHq1tAdBs3+qlx9R2u1cKOcKDkYQHIwkPxqUSLqnN2LZquZKChq3KFBspyVpiFO33ctlbW9qcujT7spEjPBhJeDCS8GCEEM701lLLVV99C5fRVr2z3dsmHlX+6CogR3gwkvBgJOHBCCXcNNf190r61+fG/wBEeH7fpy+AMwAAAABJRU5ErkJggg==" />
+                    <image width="40" height="388" id="t-mobile" class="a"
+                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAGEAgMAAAA5OYrfAAAAAXNSR0IB2cksfwAAAAlQTFRFAAAA/v7+////Pfg4EwAAAAN0Uk5TAP//RFDWIQAAAJBJREFUeJxjZIADRgYG0VCHsFHmKHOUSR+m2BSGUSZ1mVEBDGDwKmeUSSxzMMTbKHOUOcocZY4yR5mjzOHN/B1NPJN4c7UaGJZtYGCaRyTzWwKDVhkxTKYVQPP/H3QgmglxDkEmY6YDqczfxDBBbieN+X85UUwGUJMR3Fwkgsm6lIHhWgNxTIZV/6cfYCDIBAAZsc/0eN1GCwAAAABJRU5ErkJggg==" />
+                    <!-- <clippath>
+                        <rect x="100" y="0" width="100" height="356" />
+                    </clippath> -->
+                    <image width="70" height="283" id="o2-mobile" class="a"
+                        href="data:image/png;base64,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" />
+                    <image width="132" height="472" id="M-mobile" class="m"
+                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAAHYCAMAAAC7obCtAAAAAXNSR0IB2cksfwAAAwBQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Bz0LCAAAAQB0Uk5TAAABAgQGBQMHCREYHh0ZEAgTJDhLV0w5IA0MWXqUoqOWUioPJUp1nr7U3dWTJgsrVYi31+v09urMkEksXMbl8/f1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" />
+                </defs>
+                <style></style>
+                <use href="#p1-mobile" x="289" y="528" />
+                <use href="#E-mobile" x="365" y="520" />
+                <use href="#p2-mobile" x="449" y="532" />
+                <use href="#o1-mobile" x="533" y="528" />
+                <use href="#and-mobile" x="632" y="480" />
+                <use href="#t-mobile" x="750" y="404" />
+                <use href="#o2-mobile" x="790" y="512" />
+                <use href="#M-mobile" x="860" y="332" />
+            </svg>
+
+            <!-- Draggable DIV About  -->
+            <div id="about">
+                <!--boton de cierre -->
+                <div id="aboutHeader">
+                    <button class="close" id="closeAbout">&times;</button>
+                    <!-- <h2>pepo &amp; tom</h2> -->
+                </div>
+                <p>
+                    <span>pepo & tom</span> (Buenos Aires, 1996) son un dúo de artistas que trabajan juntos desde 2017.
+                    Se cruzaron por casualidad haciendo los mismos talleres de poesia y danza. Desde entonces, se han
+                    embarcado en la busqueda de un lenguaje comun que justifique las ganas de vivir.
+                    Sus obras son espacios en constante construcción, conformados por performances, videos y shows. Pepo
+                    & Tom exploran el costado íntimo de los vinculos afectivos con el afán de cuestionar los acuerdos y
+                    coerciones que los construyen. Se exponen construcciones del sentido común, para atravesarlas con el
+                    humor, la seriedad, la sátira y el sufrimiento.
+                </p>
+                <p> Sus referencias estéticas vienen del pop, del cine y del arte contemporáneo. Existe en sus trabajos
+                    una especial insistencia por expresiones artísticas que se manifestaron en un momento como novedad
+                    ya sea por su reciente innovación o por su ocaso: la proto tv, las primeras exploraciones del
+                    youtuberismo, los blogs, las viejas tecnologías, las primeras raves, etc.</p>
+                <p> Fueron residentes del programa anual de co-producciones situadas en Tecnopolis en 2023, ganaron la
+                    beca
+                    de creacion del FNA en 2021 como parte del colectivo Paraiso Fiscal.
+                </p>
+                <!-- <img src="img/pepoytom.profile.jpg" alt="foto de perfil pepo y tom"> -->
+            </div>
+
+            <!-- Draggable DIVs Bios Tom y Pepo -->
+            <section id="Bios">
+                <div id="bioTom" class="ventanaEmergente">
+                    <button class="close" id="closeM">&times;</button>
+                    <img src="img/tomProfile.jpg" alt="foto de Tom">
+                    <p> <span>Tom</span>
+                        (Buenos Aires, 1996) es un artista que trabaja en el campo de la performance, la coreografia, la
+                        música, el sonido y las artes digitales. Esta pronto a recibirse de la Licenciatura en Artes
+                        Electronicas por la Universidad de Tres de Febrero; casa de estudios donde tambien imparte
+                        clases y
+                        participa en proyectos de investigacion. Se la ha pasado haciendo cursos y talleres de todo. Su
+                        frase de cabecera es "Si lo veo lo quiero" y su pregunta preferida es "¿como llegaron estas
+                        cosas
+                        hasta aqui?"
+                    </p>
+                </div>
+                <div id="bioPepo" class="ventanaEmergente">
+                    <button class="close" id="closeE">&times;</button>
+                    <img src="img/pepoProfile.jpg" alt="foto de Pepo">
+                    <p><span>Pepo</span>
+                        (Buenos Aires, 1996) es un estratega de las condiciones de posibilidad de los flujos de
+                        informacion.
+                        Es Licenciado en Comunicacion Social por la Universidad de Buenos Aires. Desenvuelve sus
+                        palabras
+                        entre el cuerpo y la poesia, los chatbots, las telecomunicaciones, el periodismo y la critica.
+                        Formando parte del grupo editor del diario de arte contemporaneo el Flasherito. Su frase de
+                        cabecera
+                        es "hacela facil" y su pregunta preferida es "¿que estas queriendo hacer?"
+                    </p>
+                </div>
+            </section>
+
+            <!-- Draggable DIVs Obras -->
+            <section id="obrasEmergentes">
+                <div class="ventanaEmergente" id="obra1">
+                    <span class="close" id="closeObra1">&times;</span>
+                    <img id="pulperia" src="img/shhhhPulperia.jpg" alt="shhhh! en la pulperia">
+                    <div class="textDescription" id="pulperiaInfo">
+                        <button class="img-videoTrigger" id="pulpeButton">
+                            <h3>SHHHH! @ La Pulperia Mutualica</h3>
+                        </button>
+                        <p class="sinopsis">
+                            Esta obra se pensó en el contexto post pandémico que se generó luego de la
+                            expansión del virus SARS Covid-19. La Pulpería Mutualica fue un espacio que se creó con el
+                            objetivo de pensar cómo íbamos a organizar las formas de estar juntos en la Ciudad de Buenos
+                            Aires. Esta obra fue la primera en dicho espacio. Se presentaba por entonces la
+                            imposibilidad de hacer ruidos, entonces invitamos a quien quiera venir a compartir una
+                            instancia de silencio. Está instancia consistía en no poder hablar antes, ni durante ni
+                            después del show. Nuestra pieza consistía en un encadenamiento de gags, juegos y
+                            coreografías realizadas en silencio rozando la mímica, habitando la sátira, siendo
+                            frustrados payasos.
+                        </p>
+                        <p class="date">
+                            La Pulperia Mutualica, Buenos Aires 2021-2022
+                        </p>
+                    </div>
+                </div>
+                <div class="ventanaEmergente" id="obra2">
+                    <img id="silentWalksCasoFlyer" src="img/pepo_tom_foto_flyer.png" alt="flyer CASo pepo y tom">
+                    <span class="close" id="closeObra2">&times;</span>
+                    <div class="textDescription">
+                        <button class="img-videoTrigger" id="silentWalksPic">
+                            <h3>SHHHH! Silent Walks @Reserva Costanera Sur</h3>
+                        </button>
+                        <p class="sinopsis">Pepo & Tom, anclados en la escucha y la ausencia de palabras, caminan en
+                            torno a la Reserva
+                            Ecológica
+                            de la Costanera Sur de la Ciudad de Buenos Aires.</p>
+                        <p>
+                            En búsqueda del río y de aquello que logra escapar al silencio aparecen en el camino
+                            gestualidades
+                            compartidas en el lenguaje de los ruidos. Se componen ecologías sonoras y performativas
+                            que
+                            sirven
+                            de sustrato para imprimir nuevos sentidos e imaginarios sobre las montañas de escombros.
+                            Así, la
+                            apreciación de una percepción aural de los espacios habitados, sus reverberancias y sus
+                            habitabilidades compartidas, hacen emerger sensorialidades sinestésicas que ponen entre
+                            signos
+                            de
+                            pregunta la relación entre espacio y tiempo.</p>
+                        <p class="date">Radio CASo, Buenos Aires 2021</p>
+                    </div>
+                </div>
+                <div class="ventanaEmergente" id="obra3">
+                    <span class="close" id="closeObra3">&times;</span>
+                    <!-- al clickear la imagen se da play al video iframe -->
+                    <img src="img/iuniversalEmou.png" alt="iuniversal Emoushhhon en Tecnopolis">
+                    <div class="textDescription">
+                        <button class="img-videoTrigger" id="iuniversalPic">
+                            <h3>iUNIVERSAL EMOUSHHHON</h3>
+                        </button>
+                        <p class="sinopsis">Producto de la Residencia del Programa de Danza de Técnopolis, Pepo & Tom
+                            estrenaron iUNIVERSAL EMOUSHHHON. Una obra que experimenta el no-lugar, con el objetivo de
+                            ir pintando de diferentes contextos realizando expresiones performativas, compartiendo
+                            sonidos pre-grabados, cambiandose la vestimenta. Este no-lugar se armaba a partir de la
+                            exposición de un sin-fin verde. La directora del programa un día nos dijo: <i>El sin-fin
+                                verde
+                                es Técnopolis</i>. Un espacio vacío que puede contener lo que sea que quieras hacer,
+                            siempre y
+                            cuando, impliques la energía necesaria para poder sostenerlo. Quizás este fue el mayor
+                            desafío para Pepo & Tom en dicha obra, sostener la exposición de la intimidad de su vínculo
+                            : dejarse ganar por la escena y aceptar que a la hora de crear a veces conviene perder (más
+                            que ganar).
+                        </p>
+                        <p class="date">Festival Danza en Tecnopolis, Buenos Aires 2023</p>
+                    </div>
+                </div>
+                <div class="ventanaEmergente" id="obra4">
+                    <span class="close" id="closeObra4">&times;</span>
+                    <img id="laGoldenHour" src="img/goldenHour.png" alt="la golden hour">
+                    <div class="textDescription">
+                        <button class="img-videoTrigger" id="goldenHourPic">
+                            <h3>La Golden Hour</h3>
+                        </button>
+                        <p class="sinopsis"> </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Draggable DIVs Laboratorios -->
+            <section id="laboratoriosEmergentes">
+                <div class="ventanaEmergente" id="laboratorio1">
+                    <span class="close" id="closeLab1">&times;</span>
+                    <button class="img-videoTrigger">
+                        <img id="mvmRosRoseti" src="img/mvm  pop rosetti transp.png" alt="mvm workshop en Roseti 2022">
+                    </button>
+                    <div class="textDescription" id="mvmRoseti2022">
+                        <h3>Minimo Vital y Movil Workshop @ Espacio Roseti 2022</h3>
+                        <p class="sinopsis">Cada ejercicio es una practica en sí, pero desde nuestro lugar todos se
+                            relacionan con la misma pregunta: ¿Cómo transformar intenciones en relaciones?
+                            Trabajar en performance, para nosotros, es trabajar entre signos de pregunta, poniendo a
+                            prueba constantemente saberes, experiencias e intentando alejar lo más posible a las
+                            concepciones acabadas del mundo. El taller tuvo como objetivo compartir esta
+                            sensibilidad,
+                            este modo de acercarse a la practica, pero más aún tiene como deseo componer juntos
+                            estos
+                            modos de acercamiento, de espera, de acción, de composición.
+                        </p>
+                        <p class="date">Espacio Roseti, Buenos Aires 2022</p>
+                    </div>
+                </div>
+                <div class="ventanaEmergente" id="laboratorio2">
+                    <span class="close" id="closeLab2">&times;</span>
+                    <button class="img-videoTrigger">
+                        <img id="nouTaimPracticaPic" src="img/nouTaimPracticaFlyer.jpg"
+                            alt="nouTaimCoreografis Nos en vera 2024">
+                    </button>
+                    <div class="textDescription" id="nouTaimCoreografisPractica2024">
+                        <h3>nou Taim coreografis - Practica Abierta Colectiva @ Nos en Vera 2024</h3>
+                        <p class="sinopsis"> En este laboratorio nos propusimos compartir un poco de lo que habíamos
+                            estado investigando en <i>*Nou taim
+                                coreografis*</i> la residencia que hicimos a principios del año en <em>Nos en Vera</em>.
+                            Pensamos este encuentro
+                            como una oportunidad para abrir nuestra conversación, a partir de una serie de ejercicios
+                            donde abordamos grupalmente el movimiento de consensos y desacuerdos que configura formas. A
+                            partir de instrucciones simples fuimos complejizando los modos en que los cuerpos se
+                            acomodan y desacomodan en el espacio. ¿Cuándo es necesario parar? ¿Qué cooperaciones se
+                            necesitan para armar una composición? ¿Jau dip is iour lov?
+                        </p>
+                        <p class="date">Nos en Vera, Buenos Aires 2024</p>
+                    </div>
+                </div>
+                <div id="absoluteArchivesLab">
+                    <img class="absolute laboratorio1Arch" id="huevoPic" src="img/huevo.jpg" alt="huevoparado">
+                    <img class="absolute laboratorio1Arch" id="cuadroMVMPic" src="img/mvmCuadro.jpg"
+                        alt="cuadro sinoptico MVM">
+                    <img class="absolute laboratorio1Arch" id="memvmPic" src="img/mvmMeme.jpg" alt="meme MVM">
+                    <video class="absolute laboratorio1Arch" id="gusanitoRoseti" src="videos/gusanito-mvm.mp4" autoplay
+                        loop muted></video>
+                    <img class="absolute laboratorio2Arch" id="nouTaimPractica2" src="img/nouTaim2.jpg"
+                        alt="pepo sobre bidon en pared">
+                </div>
+            </section>
+
+            <!-- Draggable DIVs Residencias -->
+            <section id="residenciasEmergentes">
+                <div class="ventanaEmergente" id="residencia1">
+                    <img id="silentWalksCasoFlyerr" src="img/pepo_tom_foto_flyer.png" alt="flyer CASo pepo y tom">
+                    <span class="close" id="closeResidencia1">&times;</span>
+                    <div class="textDescription">
+                        <button class="img-videoTrigger" id="silentWalksPic1">
+                            <h3>SHHHH! Silent Walks @Reserva Costanera Sur</h3>
+                        </button>
+                        <p class="sinopsis">En 2022, en respuesta a un encargo del Centro de Arte Sonoro de la Casa
+                            Nacional del Bicentenario, Pepo & Tom desarrollan “SHHHH! Silent Walks” (2022). Una pieza
+                            radiofónica
+                            compuesta por 4 cartografías sonoras que interrogan desde una percepción aural, la
+                            imposibilidad de acceder al río en la Ciudad de Buenos Aires, una ciudad costera construida
+                            de espalda al río.</p>
+                        <p class="date">Radio CASo, Buenos Aires 2021</p>
+                    </div>
+                </div>
+                <div class="ventanaEmergente" id="residencia2">
+                    <img id="coproduccionTecnopolis" src="img/tecnopolisResidencia.jpg"
+                        alt="SHHHH! investigacion site especific en Tecnopolis">
+                    <span class="close" id="closeResidencia2">&times;</span>
+                    <div class="textDescription">
+                        <button class="img-videoTrigger">
+                            <h3>investigeishhhon site especific @ Programa Danza en Tencopolis 2023</h3>
+                        </button>
+                        <p class="sinopsis">
+                            En 2023 participaron en la residencia anual del programa de Danza en Tecnópolis, un parque
+                            temático de gestión estatal donde se desarrolla la muestra de arte, ciencia y tecnología más
+                            grande de Latinoamérica. Como resultado de esta investigación site-specific, presentan
+                            "iUNIVERSAL EMOUSHHHON" (2023)
+                        </p>
+                        <p class="date">Programa de coproducciones situadas Danza en Tecnopolis, Buenos Aires 2023</p>
+                    </div>
+                </div>
+                <div class="ventanaEmergente" id="residencia3">
+                    <span class="close" id="closeResidencia3">&times;</span>
+                    <img id="residenciaVera" src="img/pepoYtomnouTaimFlyer.jpg"
+                        alt="pepo y tom presentan residencia Nou Taim Coreografis en Nos en Vera">
+                    <div class="textDescription">
+                        <button class="img-videoTrigger">
+                            <h3>Residencia Nou Taim Coreografis @ Nos en Vera 2024</h3>
+                        </button>
+                        <p class="sinopsis">
+                            En la residencia Nou Taim Coreografis nos propusimos actualizar preguntas que hacen bombear al corazón de
+                            su trabajo performativo. ¿Cómo dialogo con la intención del otro? ¿Cuál es el estado que nos
+                            sirve para recibir su propuesta? ¿Hay resistencia esta vez? ¿Hasta dónde me puedo entregar
+                            al acontecimiento?
+                        </p>
+                        <p class="date">Nos en Vera, Buenos Aires 2024</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Draggable DIVs Live Shows -->
+            <section id="liveShowsEmergentes">
+                <div class="liveShowEmergente" id="jgLolla2024">
+                    <span class="close" id="closeJGLolla">&times;</span>
+                    <img class="imgLiveShow" id="jgLolla2024Pic" src="img/jg_lolla_2024_1.jpg" alt="julianaGattas en LollaPalooza 2024" />
+                    <video id="videoJGLolla" src="videos/jg_pres_lolla_vid.mp4"></video>
+                    <h4>Juliana Gattas Pres. Borracha en Un Bano Ajeno @ LollaPalooza Arg 2024 </h4>
+                    <p>Coreografia & Performance: Pepo & Tom + Lulu Alvarado </p>
+                </div>
+                <div class="liveShowEmergente" id="agNosEnVera2024">
+                    <span class="close" id="closeAGNosEnVera">&times;</span>
+                    <img class="imgLiveShow" id="agNosEnVera2024Pic" src="img/angelPlacentaNosEnvera.jpg"
+                        alt="angel placenta Nos en Vera" />
+                    <!-- <video id="videoAngelPlacenta" src="videos/angel_placenta_vid.mp4"></video> -->
+                    <h4>Angel Placenta Pres. NQAQA @ Nos en Vera</h4>
+                    <p>Direccion & Coreografia: Pepo & Tom</p>
+                </div>
+                <!-- <div class="ventanaEmergente" id="liveShow1">
+                    <span class="close" id="closeLive1">&times;</span>
+                    <button class="img-videoTrigger">
+                        <img id="JGLolla2024" src="img/julianaGattas.png" alt="JG Lolla 2024">
+                    </button>
+                    <div class="textDescription">
+                        <h3>Juliana Gattas Pres. Borracha en Un Bano Ajeno @ LollaPalooza Arg 2024</h3>
+                        <p class="sinopsis">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi numquam hic vitae?
+                            Rem,
+                            vel? Mollitia blanditiis illo, consequatur quod repellat minima vero quisquam quos
+                            molestias
+                            eaque esse nam incidunt ab?
+                        </p>
+                        <p class="date">LollaPalooza Argentina, Buenos Aires 2024</p>
+                    </div>
+                </div>
+                <div class="ventanaEmergente" id="liveShow2">
+                    <span class="close" id="closeLive2">&times;</span>
+                    <button class="img-videoTrigger">
+                        <img id="AngelPlacenta" src="img/angelPlacenta.png" alt="angel placenta en Vera">
+                    </button>
+                    <div class="textDescription" id="angelPlacenta2024">
+                        <h3>Angel Placenta Pres. NQAQA @ Nos en Vera</h3>
+                        <p class="sinopsis">Direccion Artistica y Coreografia para la presentacion Lorem ipsum dolor
+                            sit
+                            amet, consectetur adipisicing elit. Quos saepe sit debitis, earum est animi placeat.
+                            Nesciunt cumque voluptatibus, culpa neque totam voluptas perferendis excepturi ipsam
+                            alias
+                            doloribus, consequuntur autem!</p>
+                        <p class="date">Nos en Vera, Buenos Aires 2024</p>
+                    </div>
+                </div> -->
+            </section>
+        </main>
+        <!-- <a href="#about"> -->
+        <div class="floating-image" id="floatingImage">
+            <img src="img/caritas.png" alt="floating caritas">
+        </div>
+        <!-- </a> -->
+        <div class="video-containers">
+            <!-- Video container para iuniversal emoushhon -->
+            <div class="video-container" id="container-iuniversalVideo">
+                <iframe class="youtubeVideo" id="iuniversal-video" width="640" height="360" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Container para soundcloud Silent Walks-->
+            <div class="video-container" id="container-silentWalksCloud">
+                <!-- <span class="close" id="closeSilentWalks-cloud">&times;</span> -->
+                <iframe id="silentWalks-soundcloud" width="100%" height="450" scrolling="no" frameborder="no"
+                    allow="autoplay"></iframe>
+                <div
+                    style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                    <a href="https://soundcloud.com/pepo_tom" title="Pepo &amp; Tom" target="_blank"
+                        style="color: #cccccc; text-decoration: none;">Pepo &amp; Tom</a> · <a
+                        href="https://soundcloud.com/pepo_tom/costanera01radiocaso"
+                        title="SHHHH!SOUNDS0001 [Costanera Sur_Costa_de_Escombros] @RadioCASo" target="_blank"
+                        style="color: #cccccc; text-decoration: none;">SHHHH!SOUNDS0001 [Costanera
+                        Sur_Costa_de_Escombros] @RadioCASo</a>
+                </div>
+            </div>
+
+            <!-- Video Container para SHHHH! en la Pulperia -->
+            <div class="video-container" id="container-shhhhPulperiaVideo">
+                <iframe class="youtubeVideo" id="shhhhPulperia-video" width="640" height="360"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Video Container para Residencia Tecnopolis 2023-->
+            <div class="video-container" id="container-residenciaTecnopolis2023Video">
+                <iframe class="youtubeVideo" id="residenciaTecnopolis2023-video" width="640" height="360"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+    
+        </div>
+        <footer>
+            <div class="links">
+                <a href="https://www.instagram.com/pepo_ytom/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@pepoytom" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="mailto:pepoytom@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+            <div class="ref">
+                <p>2024 pepo & tom</p>
+                <p>
+                    diseño x <a href="https://www.instagram.com/txmmmmmmm/" target="_blank">@txmmmmmmm</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
