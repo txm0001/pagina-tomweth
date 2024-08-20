@@ -1,0 +1,891 @@
+:root {
+    /* color: #ffff; */
+    scroll-behavior: smooth;
+}
+
+body {
+    font: normal 100%/1.5 "Nanum Gothic Coding", monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-height: 100vh;
+    overflow-y: scroll;
+    background-color: aliceblue;
+    /* background-image: url("../img/fondoPpal.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+}
+
+main {
+    margin: 0 auto;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    max-height: 100%;
+}
+
+.footer {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    /* Espaciado interno */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 0.8rem;
+}
+
+.footer span strong {
+    font-size: 1rem;
+}
+
+
+.footer a:hover {
+    font-size: 1.1rem;
+    color: blue;
+    text-decoration: dashed;
+}
+
+#personaje {
+    position: fixed;
+    top: 6vh;
+    right: 1vw;
+    max-width: 33vw;
+}
+
+#personaje img {
+    cursor: pointer;
+}
+
+/* #dibuSonido {
+    display: block;
+    max-width: 13vw;
+    min-width: 30px;
+    position: fixed;
+    bottom: 0;
+    right: 5vw;
+    z-index: 5;
+} */
+
+.column-info {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    /* Fija el div en la pantalla */
+    max-height: fit-content;
+    /* Ocupa toda la altura de la ventana */
+    line-height: 2rem;
+    /* Espaciado entre líneas */
+    min-width: 100px;
+    /* Ajusta el ancho según sea necesario */
+    width: fit-content;
+    /* Ajusta el ancho según el tamaño mínimo del elemento interno más grande */
+    max-width: 30vw;
+    /* Ajusta el ancho según sea necesario */
+    /* height: 100vh; */
+    /* Ocupa toda la altura de la ventana */
+    /* overflow-y: scroll; */
+    /* Permite el desplazamiento vertical si el contenido es demasiado grande */
+    /* padding: 1em; */
+    /* Espaciado interno */
+    z-index: 1000;
+    /* Asegura que el div esté por encima de otros elementos */
+}
+
+.column-info ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    /* Ancho de la barra de desplazamiento */
+}
+
+.title {
+    font-size: 2.5em;
+    /* text-align: center; */
+    padding-top: 1em;
+}
+
+.logo-button {
+    padding: 1em 0.5em;
+    min-width: 120px;
+    z-index: 1000;
+    max-width: 17vw;
+}
+
+.button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#id-proyectos {
+    padding: 0 2em;
+    line-height: 2em;
+    letter-spacing: 0.20em;
+    list-style: none;
+    font-size: clamp(0.9rem, 14px, 2rem);
+
+    font-weight: 500;
+    min-width: max-content;
+}
+
+#id-proyectos a:hover {
+    color: blue;
+    font-size: 16px;
+    transform: translateX(15px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.info-proyecto .container-proyecto {
+    display: none;
+}
+
+.info-proyecto a:hover+.container-proyecto {
+    display: block;
+}
+
+
+.container-proyecto {
+    font-size: 1rem;
+    letter-spacing: 0.18em;
+    line-height: 1.2;
+    max-width: 40vw;
+    /*CHEKEAR ESTOO!!*/
+    /* Ajusta el ancho según sea necesario */
+    /* max-height: 80vh; */
+    /* Ajusta la altura según sea necesario */
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    /* Posición en la mitad de la pantalla */
+    left: 50%;
+    /* Posición en la mitad de la pantalla */
+    transform: translate(-50%, -50%);
+    /* Centra el contenedor */
+
+
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* overflow: auto; */
+    /* margin-bottom: 0.5em ; */
+
+    /* max-height: 100%; */
+}
+
+.image-container img {
+    /* display: block; */
+    /* height: auto; */
+    /* object-fit: cover; */
+    width: 27dvw;
+    max-width: 73%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 70%);
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 70%);
+}
+
+
+.project-descrpt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    /* letter-spacing: normal; */
+    color: black;
+    color: black;
+    text-shadow: 2px 2px 4px white, -2px -2px 4px white;
+    /* height: 100%; */
+    /* Asegúrate de que el contenedor tenga una altura definida */
+}
+
+/* ROPITAZZZZ */
+
+.container-ropa {
+    /* position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 16.66vw; */
+    /* Leave space for the left column */
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.draggable {
+    cursor: grab;
+    position: absolute;
+    width: 11vw;
+    max-height: auto;
+    animation: shake 0.7s;
+    animation-play-state: paused;
+}
+
+.draggable:hover {
+    animation-play-state: running;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0.5px, 0.5px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-0.5px, -1px) rotate(-0.5deg);
+    }
+
+    20% {
+        transform: translate(-1.5px, 0px) rotate(0.5deg);
+    }
+
+    30% {
+        transform: translate(1.5px, 1px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(0.5px, -0.5px) rotate(0.5deg);
+    }
+
+    50% {
+        transform: translate(-0.5px, 1px) rotate(-0.5deg);
+    }
+
+    60% {
+        transform: translate(-1.5px, 0.5px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(1.5px, 0.5px) rotate(-0.5deg);
+    }
+
+    80% {
+        transform: translate(-0.5px, -0.5px) rotate(0.5deg);
+    }
+
+    90% {
+        transform: translate(0.5px, 1px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0.5px, -1px) rotate(-0.5deg);
+    }
+}
+
+.draggable div {
+    display: none;
+    justify-content: space-between;
+    position: fixed;
+    left: 0%;
+    top: 80%;
+    width: 100%;
+    padding: 0 30vw 0;
+    font-size: clamp(1rem, 2.5rem, 3rem);
+    color: #414141;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+.infoPrenda {
+    opacity: 0;
+    /* Comienza con opacidad 0 */
+    transition: opacity 0.7s ease-in-out;
+    /* Transición para el cambio de opacidad */
+}
+
+/* .draggable :first-child {
+    padding-left: 3vw;
+} */
+/*PRENDAS ORDENADAS */
+
+#lbi2 {
+    top: 5dvh;
+    left: 25dvw;
+    max-width: 11vw;
+}
+
+#ju1 {
+    top: 9dvh;
+    left: 45dvw;
+}
+
+#mu2 {
+    top: 5dvh;
+    left: 60dvw;
+    min-width: 11vw;
+}
+
+#ju5 {
+    top: 33vh;
+    left: 25dvw;
+    width: 13vw;
+}
+
+#lbi4 {
+    top: 37dvh;
+    left: 42dvw;
+    width: 8vw;
+}
+
+#ctc6 {
+    top: 37dvh;
+    left: 53dvw;
+    min-width: 13vw;
+}
+
+#iss2 {
+    top: 56dvh;
+    left: 25dvw;
+    width: 9vw;
+}
+
+#corel3 {
+    top: 55dvh;
+    left: 41dvw;
+}
+
+#ju3 {
+    top: 70dvh;
+    left: 55dvw;
+}
+
+#ax6 {
+    top: 85dvh;
+    left: 23dvw;
+    width: 8vw;
+}
+
+#ctc1 {
+    top: 90dvh;
+    left: 40dvw;
+    width: 12vw;
+}
+
+#ax1 {
+    top: 86dvh;
+    left: 60dvw;
+    width: 9vw;
+}
+
+#ctc5 {
+    top: 118dvh;
+    left: 31dvw;
+    width: 9vw;
+}
+
+#ax4 {
+    top: 115dvh;
+    left: 46dvw;
+    width: 10vw;
+}
+
+#ax3 {
+    top: 138dvh;
+    left: 44dvw;
+    width: 13vw;
+}
+
+#ju4 {
+    top: 127dvh;
+    left: 60dvw;
+    width: 13vw;
+}
+
+#ju2 {
+    top: 136dvh;
+    left: 57dvw;
+    width: 14vw;
+}
+
+#iss7 {
+    top: 150dvh;
+    left: 29dvw;
+    width: 10vw;
+}
+
+#lbi1 {
+    top: 160dvh;
+    left: 62dvw;
+    width: 9vw;
+}
+
+#mu4 {
+    top: 165dvh;
+    left: 40dvw;
+    width: 17vw;
+    rotate: 30deg;
+}
+
+#iss3 {
+    top: 180dvh;
+    left: 58dvw;
+
+}
+
+#corel5 {
+    top: 175dvh;
+    left: 27dvw;
+}
+
+#corel1 {
+    top: 193dvh;
+    left: 28dvw;
+    width: 10vw;
+}
+
+#iss6 {
+    top: 206dvh;
+    left: 56dvw;
+    width: 9vw;
+}
+
+#mu3 {
+    top: 223dvh;
+    left: 36dvw;
+}
+
+#od1 {
+    top: 220dvh;
+    left: 55dvw;
+    width: 3vw;
+}
+
+#iss5 {
+    top: 240dvh;
+    left: 58dvw;
+}
+
+#ax7 {
+    top: 250dvh;
+    left: 40dvw;
+    width: 10vw;
+}
+
+#ax5 {
+    top: 240dvh;
+    left: 26dvw;
+    width: 9vw;
+}
+
+#ctc4 {
+    top: 275dvh;
+    left: 26dvw;
+}
+
+#mu1 {
+    top: 280dvh;
+    left: 55dvw;
+}
+
+#iss4 {
+    top: 308dvh;
+    left: 45dvw;
+}
+
+#ctc2 {
+    top: 320dvh;
+    left: 58dvw;
+}
+
+#lbi5 {
+    top: 330dvh;
+    left: 33dvw;
+    width: 8vw;
+}
+
+#corel2 {
+    top: 347dvh;
+    left: 48dvw;
+    width: 10vw;
+}
+
+#ax2 {
+    top: 355dvh;
+    left: 30dvw;
+}
+
+#corel4 {
+    top: 375dvh;
+    left: 59dvw;
+}
+
+#ctc3 {
+    top: 393dvh;
+    left: 42dvw;
+    width: 14vw;
+}
+
+#iss1 {
+    top: 400dvh;
+    left: 57dvw;
+    width: 13vw;
+}
+
+#lbi3 {
+    top: 417dvh;
+    left: 30dvw;
+}
+
+/* ARXXEE
+
+#ax1 {
+    top: 10vh;
+    left: 40vw;
+    max-width: 9vw;
+}
+
+#ax2 {
+    top: 10%;
+    left: 30%;
+    max-width: 8vw;
+}
+
+#ax3 {
+    top: 10%;
+    left: 50%;
+}
+
+#ax4 {
+    top: 80%;
+    left: 50%;
+}
+
+#ax5 {
+    top: 10%;
+    left: 50%;
+}
+
+#ax6 {
+    top: 30%;
+    left: 30%;
+}
+
+#ax7 {
+    top: 30%;
+    left: 30%;
+}
+
+/* COMUNIDAD.T_C */
+/*
+#ctc1 {
+    top: 70%;
+    left: 50%;
+}
+#ctc2 {
+    top: 70%;
+    left: 60%;
+}
+#ctc3 {
+    top: 70%;
+    left: 70%;
+}
+#ctc4 {
+    top: 70%;
+    left: 80%;
+}
+#ctc5 {
+    top: 70%;
+    left: 90%;
+}
+
+/* corel */
+/*
+#corel1 {
+    top: 110%;
+    left: 50%;
+}
+#corel2 {
+    top: 110%;
+    left: 60%;
+}
+
+#corel4 {
+    top: 110%;
+    left: 80%;
+}
+#corel5 {
+    top: 110%;
+    left: 90%;
+}
+
+/* issaarchivos */
+/*
+#iss1 {
+    top: 50%;
+    left: 50%;
+}
+
+#iss3 {
+    top: 50%;
+    left: 70%;
+}
+#iss4 {
+    top: 50%;
+    left: 80%;
+}
+#iss5 {
+    top: 50%;
+    left: 90%;
+}
+#iss6 {
+    top: 50%;
+    left: 100%;
+}
+#iss7 {
+    top: 50%;
+    left: 110%;
+}
+
+/* juishiii */
+/*
+
+#ju2 {
+    top: 30%;
+    left: 60%;
+}
+
+#ju4 {
+    top: 30%;
+    left: 80%;
+}
+
+
+/* lame beauty item */
+/*
+#lbi1 {
+    top: 90%;
+    left: 50%;
+}
+
+#lbi3 {
+    top: 90%;
+    left: 70%;
+}
+
+#lbi5 {
+    top: 90%;
+    left: 90%;
+}
+
+/* mushhiiii */
+/*
+#mu1 {
+    top: 50%;
+    left: 50%;
+}
+
+#mu3 {
+    top: 50%;
+    left: 70%;
+}
+#mu4 {
+    top: 50%;
+    left: 80%;
+}
+
+/* odor */
+/*
+#od1 {
+    top: 70%;
+    left: 50%;
+} 
+
+
+*/
+
+#infoWebstarz {
+    position: fixed;
+    max-width: 100%;
+    height: auto;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    z-index: 1001;
+    letter-spacing: 0.2em;
+    line-height: 2;
+    font-size: 1rem;
+}
+
+#infoWebstarz h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#infoWebstarz em {
+    font-style: italic;
+    font-weight: 600;
+}
+#infoWebstarz a {
+    font-weight: 600;
+}
+
+#infoWestarz a:hover {
+    color: blue;
+}
+
+/* .arrow-button img{
+    padding-top: 2em;
+    cursor: pointer;
+    max-width: 20%;
+} */
+
+/* Estilos para las estrellitas */
+.star {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    background-color: white; /* Cambiado a negro */
+    border-radius: 50%;
+    box-shadow: 0 0 10px grey; /* Cambiado a negro */
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+
+
+
+@media (max-width: 500px) and (orientation: portrait) {
+
+    body {
+        background-image: url("../img/fondoPpalPortrait.jpg");
+    }
+
+    #personaje {
+        top: 25vh;
+        right: 8vw;
+        max-width: 40vw;
+    }
+
+
+    .column-info {
+        position: absolute;
+        padding: 0 5px;
+        height: fit-content;
+    }
+
+    #id-proyectos {
+        font-size: 12px;
+        padding: 6px;
+        width: fit-content;
+        letter-spacing: normal;
+    }
+
+    .image-container img {
+        width: 50vw;
+    }
+
+    .draggable {
+        width: 25%;
+    }
+
+    .draggable div {
+        font-size: 1rem;
+    }
+
+    #prenda1 {
+        top: 20%;
+        left: 45vw;
+        /* max-width: 9vw; */
+    }
+
+    #prenda2 {
+        top: 33%;
+        left: 45vw;
+        /* max-width: 9vw; */
+    }
+
+    #prenda3 {
+        top: 50%;
+        left: 45vw;
+        /* max-width: 9vw; */
+    }
+
+    #prenda4 {
+        top: 65%;
+        left: 45vw;
+        /* max-width: 9vw; */
+    }
+
+    #prenda5 {
+        top: 80%;
+        left: 45vw;
+        /* max-width: 9vw; */
+    }
+
+    #prenda6 {
+        top: 100%;
+        left: 45vw;
+        /* max-width: 9vw; */
+    }
+
+    #prenda7 {
+        top: 115%;
+        left: 45vw;
+        /* max-width: 9vw; */
+    }
+
+
+
+    .logo-button {
+        padding: 0em;
+        min-width: 150px;
+    }
+
+
+    .container-proyecto {
+        /* z-index: 10000; */
+        max-width: 70vw;
+    }
+
+    .draggable {
+        max-width: 10%;
+    }
+}
+
+@media (hover: none) {
+    .info-proyecto a:hover+.container-proyecto {
+        display: block;
+    }
+}
+
+@media (hover: hover) {
+    .info-proyecto a:hover {
+        transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    }
+}
