@@ -1,23 +1,34 @@
+document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('load', function () {
+        document.body.classList.remove('hidden');
+        // Añadir un retraso de 2.5 segundos (2500 milisegundos)
+        setTimeout(function() {
+            // Ocultar el loader con una transición de desvanecimiento
+            document.getElementById('loader').classList.add('hidden');
+            // Mostrar el contenido con una transición de desvanecimiento
+            document.getElementById('content').classList.add('visible');
+            // Mostrar el body
+            
+        }, 2500); // Cambia 2500 por el tiempo en milisegundos que desees
+    });
+});
+
 // Variable global para rastrear el índice Z más alto
 let highestZIndex = 1;
 
 // Función para hacer que un elemento sea arrastrable
 function makeElementDraggable(elmnt) {
-    // Variables para almacenar las posiciones del mouse/touch
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     let lastTap = 0;
 
-    // Asigna los manejadores de eventos para el mouse y el touch
     elmnt.onmousedown = dragMouseDown;
     elmnt.ontouchstart = handleTouchStart;
     elmnt.ondblclick = handleDoubleClick;
 
-    // Función para manejar el inicio del toque
     function handleTouchStart(e) {
         const currentTime = new Date().getTime();
         const tapLength = currentTime - lastTap;
 
-        // Si el tiempo entre toques es menor a 300ms, se considera un doble toque
         if (tapLength < 300 && tapLength > 0) {
             toggleSize(elmnt);
         } else {
@@ -27,13 +38,11 @@ function makeElementDraggable(elmnt) {
         lastTap = currentTime;
     }
 
-    // Función para manejar el doble clic en la versión de escritorio
     function handleDoubleClick(e) {
-        e.stopPropagation(); // Evitar que el evento de clic se propague al documento
+        e.stopPropagation();
         toggleSize(e.target);
     }
 
-    // Función para alternar el tamaño del elemento y mostrar el div de información
     function toggleSize(elmnt) {
         let infoDiv = elmnt.parentElement.querySelector('.infoPrenda');
 
@@ -41,33 +50,29 @@ function makeElementDraggable(elmnt) {
             elmnt.style.transform = 'scale(1)';
             elmnt.style.transition = 'transform 0.3s ease';
             elmnt.style.imageRendering = 'auto';
-            document.removeEventListener('click', handleDocumentClick); // Remover el evento de clic en el documento
+            document.removeEventListener('click', handleDocumentClick);
 
-            // Ocultar el div de información
             if (infoDiv) {
                 infoDiv.style.opacity = '0';
                 setTimeout(() => {
                     infoDiv.style.display = 'none';
-                }, 500); // Espera a que la transición termine antes de ocultar el div
+                }, 500);
             }
         } else {
             elmnt.style.transform = 'scale(4)';
             elmnt.style.transition = 'transform 0.3s ease';
             elmnt.style.imageRendering = 'high-quality';
-            document.addEventListener('click', handleDocumentClick); // Agregar el evento de clic en el documento
+            document.addEventListener('click', handleDocumentClick);
 
-            // Mostrar el div de información con fadeIn
             if (infoDiv) {
                 infoDiv.style.display = 'flex';
                 setTimeout(() => {
                     infoDiv.style.opacity = '1';
-                }, 10); // Pequeño retraso para asegurar que el display se aplique antes de la transición
+                }, 10);
             }
         }
     }
 
-
-    // Función para manejar el clic en el documento
     function handleDocumentClick(e) {
         const elmnt = document.querySelector('[style*="transform: scale(4)"]');
         if (elmnt && !elmnt.contains(e.target)) {
@@ -75,13 +80,11 @@ function makeElementDraggable(elmnt) {
         }
     }
 
-    // Función para manejar el inicio del arrastre con el mouse
     function dragMouseDown(e) {
         e = e || window.event;
         e.preventDefault();
         elmnt.style.cursor = 'grabbing';
 
-        // Determina las posiciones iniciales del mouse/touch
         if (e.type === 'touchstart') {
             pos3 = e.touches[0].clientX;
             pos4 = e.touches[0].clientY;
@@ -90,23 +93,19 @@ function makeElementDraggable(elmnt) {
             pos4 = e.clientY;
         }
 
-        // Incrementa el índice Z para asegurar que el elemento esté al frente
         highestZIndex++;
         elmnt.style.zIndex = highestZIndex;
 
-        // Asigna los manejadores de eventos para el movimiento y la finalización del arrastre
         document.onmouseup = closeDragElement;
         document.onmousemove = elementDrag;
         document.ontouchend = closeDragElement;
         document.ontouchmove = elementDrag;
     }
 
-    // Función para manejar el arrastre del elemento
     function elementDrag(e) {
         e = e || window.event;
         e.preventDefault();
 
-        // Calcula las nuevas posiciones del mouse/touch
         if (e.type === 'touchmove') {
             pos1 = pos3 - e.touches[0].clientX;
             pos2 = pos4 - e.touches[0].clientY;
@@ -119,26 +118,48 @@ function makeElementDraggable(elmnt) {
             pos4 = e.clientY;
         }
 
-        // Establece la nueva posición del elemento
         elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
         elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
     }
 
-    // Función para finalizar el arrastre del elemento
     function closeDragElement() {
         elmnt.style.cursor = 'grab';
         document.onmouseup = null;
         document.onmousemove = null;
         document.ontouchend = null;
         document.ontouchmove = null;
+
+        const personajeDiv = document.getElementById('personaje');
+        const personajeRect = personajeDiv.getBoundingClientRect();
+        const elmntRect = elmnt.getBoundingClientRect();
+
+        const isInsidePersonaje = (
+            elmntRect.top >= personajeRect.top &&
+            elmntRect.left >= personajeRect.left &&
+            elmntRect.bottom <= personajeRect.bottom &&
+            elmntRect.right <= personajeRect.right
+        );
+
+        if (isInsidePersonaje) {
+            elmnt.style.position = 'fixed';
+            elmnt.style.top = elmntRect.top + "px";
+            elmnt.style.left = elmntRect.left + "px";
+        } else {
+            const parentRect = elmnt.parentElement.getBoundingClientRect();
+
+            // Calcular la posición correcta relativa al padre
+            const offsetX = elmntRect.left - parentRect.left;
+            const offsetY = elmntRect.top - parentRect.top;
+
+            elmnt.style.position = 'absolute';
+            elmnt.style.top = offsetY + "px";
+            elmnt.style.left = offsetX + "px";
+        }
     }
 }
 
-// Espera a que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", function () {
-    // Selecciona todos los elementos con la clase 'draggable'
     const draggableElements = document.querySelectorAll('.draggable');
-    // Hace que cada elemento sea arrastrable
     draggableElements.forEach(elmnt => {
         makeElementDraggable(elmnt);
     });
@@ -146,62 +167,75 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+const soundInfoWebstarz = new Audio('sound/sintes_starz.mp3');
 
 document.querySelector('.logo-button').addEventListener('click', function () {
     const fondo = document.querySelector('.fondo');
     const idProyectos = document.getElementById('id-proyectos');
     const logo = document.querySelector('.logo-button');
     const infoWebstarz = document.getElementById('infoWebstarz');
+    const isSmallScreenPortrait = window.matchMedia('(max-width: 500px) and (orientation: portrait)').matches;
+    
+    if (isSmallScreenPortrait) {
+        const footer = document.querySelector('footer');
+        if (footer.style.display === 'none' || footer.style.display === '') {
+            footer.style.display = 'flex';
+        } else {
+            footer.style.display = 'none';
+        }
+    }
+    if (!soundInfoWebstarz.paused) {
+        // Pausar y reiniciar el sonido si está sonando
+        soundInfoWebstarz.pause();
+        soundInfoWebstarz.currentTime = 0;
+    } else {
+        // Reproducir el sonido si está pausado
+        soundInfoWebstarz.volume = 0.1;
+        soundInfoWebstarz.loop = true;
+        soundInfoWebstarz.play();
+    }
 
     if (fondo) {
-        // Revertir la transformación y la transición del logo
-        logo.style.top = `${logo.offsetTop}px`; // Fijar la posición actual
-        logo.style.left = `${logo.offsetLeft}px`; // Fijar la posición actual
-        logo.offsetHeight; // Forzar un reflujo para que los estilos iniciales se apliquen antes de la transición
-        logo.style.top = ''; // Eliminar el estilo inline
-        logo.style.left = ''; // Eliminar el estilo inline
-        logo.style.transform = ''; // Eliminar la transformación
-        logo.style.zIndex = ''; // Restablecer el z-index
-        logo.style.position = ''; // Restablecer la posición por defecto
+        logo.style.top = `${logo.offsetTop}px`; 
+        logo.style.left = `${logo.offsetLeft}px`; 
+        logo.offsetHeight; 
+        logo.style.top = ''; 
+        logo.style.left = ''; 
+        logo.style.transform = ''; 
+        logo.style.zIndex = ''; 
+        logo.style.position = ''; 
 
-        // Ocultar infoWebstarz con fadeout
         infoWebstarz.style.transition = 'opacity 0.5s ease';
         infoWebstarz.style.opacity = '0';
         setTimeout(() => {
             infoWebstarz.style.display = 'none';
-        }, 500); // Esperar a que termine la transición
+        }, 500); 
 
-        // Eliminar las estrellitas con fadeout
         fondo.style.transition = 'opacity 0.5s ease';
         fondo.style.opacity = '0';
         setTimeout(() => {
             fondo.remove();
-        }, 500); // Esperar a que termine la transición
+        }, 500); 
 
-        // Mostrar idProyectos y restablecer su posición
         idProyectos.style.display = 'block';
-        idProyectos.style.position = ''; // Restablecer la posición
-        idProyectos.style.zIndex = ''; // Restablecer el z-index
+        idProyectos.style.position = ''; 
+        idProyectos.style.zIndex = ''; 
     } else {
-        // Establecer estilos iniciales
         logo.style.position = 'fixed';
         logo.style.transition = 'transform 0.5s ease, top 0.5s ease, left 0.5s ease';
-        logo.style.top = `${logo.offsetTop}px`; // Fijar la posición inicial
-        logo.style.left = `${logo.offsetLeft}px`; // Fijar la posición inicial
+        logo.style.top = `${logo.offsetTop}px`; 
+        logo.style.left = `${logo.offsetLeft}px`; 
 
-        // Forzar un reflujo para que los estilos iniciales se apliquen antes de la transición
         logo.offsetHeight;
 
-        // Aplicar la transformación y la transición
         logo.style.top = '5%';
         logo.style.left = '50%';
-        logo.style.transform = 'translateX(-50%) scale(1.5)'; // Centra horizontalmente y escala
+        logo.style.transform = 'translateX(-50%) scale(1.5)'; 
         
         idProyectos.style.display = 'none'; 
 
-        // Mostrar infoWebstarz y restablecer su opacidad
         infoWebstarz.style.display = 'flex';
-        infoWebstarz.style.opacity = '1'; // Restablecer la opacidad
+        infoWebstarz.style.opacity = '1'; 
 
         const newFondo = document.createElement('div');
         newFondo.classList.add('fondo');
@@ -216,27 +250,45 @@ document.querySelector('.logo-button').addEventListener('click', function () {
         newFondo.style.zIndex = highestZIndex++;
         document.body.appendChild(newFondo);
 
-        // Crear estrellitas
+    
+
+        // Crear estrellas en el fondo
         for (let i = 0; i < 100; i++) {
             const star = document.createElement('div');
             star.classList.add('star');
             star.style.left = `${Math.random() * 100}vw`;
-            star.style.animationDuration = `${Math.random() * 3 + 2}s`; // Duración aleatoria entre 2 y 5 segundos
-            star.style.animationDelay = `${Math.random() * 5}s`; // Retraso aleatorio
+            star.style.animationDuration = `${Math.random() * 3 + 2}s`; 
+            star.style.animationDelay = `${Math.random() * 5}s`; 
             newFondo.appendChild(star);
         }
     }
 });
 
+
+
 // Crear el elemento de audio
 const giggleSound = new Audio('sound/girl-giggle.wav');
 const uwuSound = new Audio('sound/uwu.mp3');
+
+// Ajustar el volumen de los sonidos (0.0 es el volumen mínimo y 1.0 es el volumen máximo)
+giggleSound.volume = 0.1; // Ajusta este valor según sea necesario
+uwuSound.volume = 0.1; // Ajusta este valor según sea necesario
+
+// Pre-cargar los archivos de audio
+giggleSound.preload = 'auto';
+uwuSound.preload = 'auto';
 
 // Variable para rastrear el último sonido reproducido
 let lastSoundPlayed = null;
 
 // Función para alternar sonidos
 function playAlternateSound() {
+    // Detener el sonido actual antes de reproducir el siguiente
+    if (lastSoundPlayed) {
+        lastSoundPlayed.pause();
+        lastSoundPlayed.currentTime = 0; // Reiniciar el sonido
+    }
+
     if (lastSoundPlayed === giggleSound) {
         uwuSound.play();
         lastSoundPlayed = uwuSound;
@@ -246,8 +298,8 @@ function playAlternateSound() {
     }
 }
 
-//--- Al clickear #personaje cambia el source de la imagen dentro de #personaje ---
-document.querySelector('#personaje').addEventListener('click', function () {
+//--- Al clickear o tocar #personaje cambia el source de la imagen dentro de #personaje ---
+document.querySelector('#personaje').addEventListener('pointerdown', function () {
     const personaje = document.querySelector('#personaje img');
     if (personaje.src.includes('img/personajes/webstarElf1.png')) {
         personaje.src = 'img/personajes/webstarElf2.png';
@@ -259,11 +311,6 @@ document.querySelector('#personaje').addEventListener('click', function () {
         personaje.src = 'img/personajes/webstarElf1.png';
     }
     // Reproducir el sonido alternado
-    playAlternateSound();
-});
-
-// Agregar evento para touch
-document.querySelector('#personaje').addEventListener('touchstart', function () {
     playAlternateSound();
 });
 
@@ -303,6 +350,14 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+});
+
+document.getElementById('toggle-lang-es').addEventListener('click', function () {
+    window.location.href = 'index.html';
+});
+
+document.getElementById('toggle-lang-en').addEventListener('click', function () {
+    window.location.href = 'index-en.html';
 });
 
 // // Función para manejar el desplazamiento de la página

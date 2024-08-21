@@ -10,12 +10,47 @@ body {
     box-sizing: border-box;
     max-height: 100vh;
     overflow-y: scroll;
-    background-color: aliceblue;
+    background-color: #f0f8ff;
     /* background-image: url("../img/fondoPpal.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; */
+}
+
+body.hidden {
+    visibility: hidden;
+}
+
+/* Estilos para el loader */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+    /* Fondo blanco, puedes cambiarlo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Asegúrate de que esté por encima de todo el contenido */
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+    /* Transición de desvanecimiento */
+}
+
+#loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+    /* Evita la interacción con el loader oculto */
+}
+
+#loader img {
+    width: 50dvw;
+    /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
 }
 
 main {
@@ -24,6 +59,13 @@ main {
     width: 100%;
     display: flex;
     max-height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    /* Transición de desvanecimiento */
+}
+
+main.visible {
+    opacity: 1;
 }
 
 .footer {
@@ -38,7 +80,7 @@ main {
     bottom: 0;
     left: 0;
     font-size: 0.8rem;
-    z-index: 1003;
+    z-index: 10001;
 }
 
 .footer span strong {
@@ -208,6 +250,9 @@ img {
     color: black;
     color: black;
     text-shadow: 2px 2px 4px white, -2px -2px 4px white;
+    backdrop-filter: blur(5px); /* Añade un desenfoque de 5px al fondo */
+    -webkit-backdrop-filter: blur(5px); /* Soporte para navegadores WebKit */
+    border-radius: 13%;
     /* height: 100%; */
     /* Asegúrate de que el contenedor tenga una altura definida */
 }
@@ -365,7 +410,8 @@ img {
 
 #corel3 {
     top: 55dvh;
-    left: 41dvw;
+    left: 37dvw;
+    width: 15dvw;
 }
 
 #ju3 {
@@ -412,7 +458,7 @@ img {
 #ju4 {
     top: 127dvh;
     left: 60dvw;
-    width: 13vw;
+    width: 10vw;
 }
 
 #ju2 {
@@ -454,13 +500,13 @@ img {
 #corel1 {
     top: 193dvh;
     left: 28dvw;
-    width: 10vw;
+    width: 15dvw;
 }
 
 #iss6 {
     top: 206dvh;
     left: 56dvw;
-    width: 9vw;
+
 }
 
 #mu3 {
@@ -518,9 +564,9 @@ img {
 }
 
 #corel2 {
-    top: 347dvh;
+    top: 341dvh;
     left: 48dvw;
-    width: 10vw;
+    width: 14vw;
 }
 
 #ax2 {
@@ -726,7 +772,8 @@ img {
     transform: translate(-50%, -50%);
     display: none;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    /* justify-content: center; */
     align-items: center;
     text-align: justify;
     z-index: 1001;
@@ -735,18 +782,25 @@ img {
     font-size: 1rem;
 }
 
-#infoWebstarz h2 {
+#infoWebstarz h1 {
     font-size: 1.5rem;
     font-weight: 600;
-    text-align: center;
+    text-align:center;
     margin: 0;
-    padding: 0;
+    padding-bottom: 15px;
 }
 
 #infoWebstarz em {
     font-style: italic;
     font-weight: 600;
 }
+
+#infoWebstarz strong {
+    text-align: justify;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
 #infoWebstarz a {
     font-weight: 600;
 }
@@ -766,9 +820,11 @@ img {
     position: fixed;
     width: 5px;
     height: 5px;
-    background-color: white; /* Cambiado a negro */
+    background-color: white;
+    /* Cambiado a negro */
     border-radius: 50%;
-    box-shadow: 0 0 10px grey; /* Cambiado a negro */
+    box-shadow: 0 0 10px grey;
+    /* Cambiado a negro */
     animation: fall linear infinite;
 }
 
@@ -778,31 +834,82 @@ img {
     }
 }
 
+.language-toggle {
+    position: absolute;
+    top: 2vh;
+    right: 3dvh;
+}
+
+.language-toggle button {
+
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 3px;
+    letter-spacing: 1.9;
+    font-size: 1.5rem;
+}
+
+.language-toggle button:hover {
+    color: blue;
+    transform: scale(1.1);
+    font-weight: 600   ;
+}
 
 
 
 @media (max-width: 500px) and (orientation: portrait) {
 
-    body {
-        background-image: url("../img/fondoPpalPortrait.jpg");
-    }
-
     #personaje {
-        top: 25vh;
-        right: 8vw;
-        max-width: 40vw;
+        top: 21dvh;
+        right: 5dvw;
+        max-width: 50vw;
     }
-
 
     .column-info {
         position: absolute;
         padding: 0 5px;
         height: fit-content;
     }
+    .footer {
+        font-size: 12px;
+        padding: 6px;
+        height: 40px;
+        display: none;
+    }
+
+    .language-toggle {
+        top: 1dvh;
+        right: 0;
+        padding-right: 1rem;
+    }    
+
+    .language-toggle button {
+        font-size: 1.3rem;
+        padding: 0;
+    }
+
+    #infoWebstarz {
+        font-size: 1rem;
+        top: 60%;
+        text-align: center;
+    }
+
+    #loader {
+        height: 80vh;
+    }
+
+    .logo-button {
+        position: fixed;
+        transition: transform 0.5s, top 0.5s, left 0.5s;
+        top: 2vh;
+        left: 50%;
+        transform: translateX(-50%) scale(1);
+    }
 
     #id-proyectos {
         font-size: 12px;
-        padding: 6px;
+        padding: 7px;
+        margin-top: 17vh;
         width: fit-content;
         letter-spacing: normal;
     }
@@ -811,12 +918,21 @@ img {
         width: 50vw;
     }
 
+
     .draggable {
-        width: 25%;
+        width: 30dvw;
     }
 
     .draggable div {
         font-size: 1rem;
+    }
+
+    
+    .project-descrpt {
+        font-size: 11px;
+        /* padding: 1em; */
+        width: 70dvw;
+        border-radius: 100%;
     }
 
     #prenda1 {
